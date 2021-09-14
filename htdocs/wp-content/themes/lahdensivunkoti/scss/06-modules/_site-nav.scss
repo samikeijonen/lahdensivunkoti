@@ -1,0 +1,83 @@
+@include media(navigation) {
+    .is-overflow-hidden.is-site-nav-opened {
+        overflow: hidden;
+    }
+}
+
+.site-nav__items {
+    @include reset-list();
+
+    @include media(navigation) {
+        background-color: var(--wp--custom--color--grey--200);
+        display: none;
+        text-align: center;
+
+        &.is-opened {
+            bottom: 0;
+            display: block;
+            left: 0;
+            overflow-x: auto;
+            padding: var(--wp--custom--spacing--16) var(--wp--custom--spacing--2) var(--wp--custom--spacing--2);
+            position: fixed;
+            right: 0;
+            top: 0;
+            z-index: 100;
+        }
+    }
+
+    @include media-min(navigation) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.site-nav__items > .menu-item {
+    @include media-min(navigation) {
+        margin-right: var(--wp--custom--spacing--4);
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.site-nav__items a {
+    text-decoration: none;
+    display: block;
+    padding: var(--wp--custom--spacing--2);
+
+    @include media-min(navigation) {
+        padding: var(--wp--custom--spacing--1) 0;
+    }
+
+    &:hover {
+        outline: 0;
+        text-decoration: underline;
+    }
+}
+
+.menu-item [aria-current="page"] {
+    text-decoration: underline;
+}
+
+.site-nav__toggle {
+    @include font-size(20);
+    background-color: transparent;
+    border: 0.0625rem solid var(--wp--custom--color--primary--500);
+    border-radius: 0.5rem;
+    color: var(--wp--custom--color--grey--900);
+    font-weight: 600;
+    line-height: 1;
+    padding: var(--wp--custom--spacing--2) var(--wp--custom--spacing--3);
+    position: relative;
+    z-index: 120;
+
+    // For some reason Firefox in WIN doesn't give good focus styles withouth this.
+    &:focus {
+        outline: 2px solid var(--wp--custom--color--grey--900);
+    }
+
+    @include media-min(navigation) {
+        display: none;
+    }
+}

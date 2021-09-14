@@ -1,0 +1,34 @@
+.pagination {
+    text-align: center;
+}
+
+.page-numbers {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    padding: 0.5rem 0.125rem;
+    line-height: 1rem;
+    text-align: center;
+
+    &.prev,
+    &.next {
+        width: auto;
+    }
+
+    &.current {
+        background-color: var(--wp--custom--color--primary--100);
+        color: #fff;
+    }
+}
+
+.posts-navigation {
+    @include clearfix();
+
+    .nav-previous {
+        float: left;
+    }
+
+    .nav-next {
+        float: right;
+    }
+}

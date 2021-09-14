@@ -1,0 +1,25 @@
+.site-header {
+    border-bottom: 1px solid var(--wp--custom--color--grey--300);
+    padding: var(--wp--custom--spacing--2) 0;
+
+    @include media-min(navigation) {
+        padding: var(--wp--custom--spacing--4) 0;
+    }
+}
+
+.site-header__title {
+    font-weight: 700;
+    margin: 0;
+    position: relative;
+    z-index: 110;
+}
+
+.site-header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include media(navigation) {
+        flex-wrap: wrap;
+    }
+}

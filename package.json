@@ -1,0 +1,51 @@
+{
+  "name": "kala-stack",
+  "version": "1.0.0",
+  "description": "kala-stack project",
+  "author": "MEOM Oy",
+  "license": "GPL-2.0-or-later",
+  "keywords": [
+    "WordPress",
+    "editor"
+  ],
+  "homepage": "https://bitbucket.org/meom/kala-stack",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/wordpress/wordpress.git"
+  },
+  "bugs": "https://bitbucket.org/meom/kala-stack/issues?status=new&status=open",
+  "engines": {
+    "node": ">=12.0.0",
+    "npm": ">=6.9.0"
+  },
+  "dependencies": {
+    "@meom/navigation": "^0.3.0",
+    "classnames": "^2.3.1",
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^18.0.0",
+    "autoprefixer": "^10.3.1",
+    "browser-sync": "^2.27.4",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "glob": "^7.1.7",
+    "prettier": "^2.3.2",
+    "stylelint-order": "^4.1.0",
+    "webpack-remove-empty-scripts": "^0.7.1"
+  },
+  "scripts": {
+    "build": "wp-scripts build --webpack-no-externals",
+    "check-engines": "wp-scripts check-engines",
+    "format:js": "wp-scripts format-js 'htdocs/wp-content/themes/lahdensivunkoti/js/**/*.js'",
+    "lint": "npm run lint:css && npm run lint:js",
+    "lint:css": "wp-scripts lint-style 'htdocs/wp-content/themes/lahdensivunkoti/scss/**/*.scss'",
+    "lint:js": "wp-scripts lint-js 'htdocs/wp-content/themes/lahdensivunkoti/js/**/*.js'",
+    "lint:pkg-json": "wp-scripts lint-pkg-json",
+    "start": "wp-scripts start --webpack-no-externals",
+    "test": "scripts/run-tests"
+  },
+  "browserslist": [
+    "extends @wordpress/browserslist-config"
+  ]
+}

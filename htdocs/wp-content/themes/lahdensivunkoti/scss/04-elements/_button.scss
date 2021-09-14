@@ -1,0 +1,25 @@
+.btn,
+.wp-block-button__link {
+    @include font-size(20);
+    background-color: var(--wp--custom--color--primary--100);
+    border: 0.0625rem solid var(--wp--custom--color--primary--500);
+    border-radius: 0.5rem;
+    color: var(--wp--custom--color--grey--900);
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    line-height: 1;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    transition: background-color var(--wp--custom--transition--3);
+
+    &:hover,
+    &:focus {
+        background-color: var(--wp--custom--color--primary--300);
+    }
+
+    // &--small doesn't work because of elements like button, input
+    &.btn--small {
+        padding: 0.5rem;
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "category": {
+        "name": "MEOM-lohkot",
+        "slug": "meomblocks"
+    },
+    "blocks": [
+        {
+            "slug": "hero"
+        },
+        {
+            "slug": "image-and-text"
+        }
+    ],
+    "acf_blocks": {}
+}

@@ -1,0 +1,26 @@
+.footer-nav__items {
+    @include reset-list();
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-nav__items > .menu-item {
+    margin-right: var(--wp--custom--spacing--4);
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.footer-nav__items a {
+    text-decoration: none;
+
+    @include media-min(navigation) {
+        padding: var(--wp--custom--spacing--1) 0;
+    }
+
+    &:hover {
+        outline: 0;
+        text-decoration: underline;
+    }
+}

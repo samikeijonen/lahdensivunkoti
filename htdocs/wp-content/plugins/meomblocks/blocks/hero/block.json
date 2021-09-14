@@ -1,0 +1,10 @@
+{
+	"apiVersion": 2,
+	"name": "meomblocks/hero",
+	"title": "Hero",
+	"category": "meomblocks",
+	"icon": "align-pull-right",
+	"description": "Hero at top of the page.",
+	"keywords": [ "hero", "header" ],
+	"textdomain": "meomblocks"
+}

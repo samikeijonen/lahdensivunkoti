@@ -1,0 +1,29 @@
+@import "../../style-imports/theme-imports";
+
+.image-and-text {
+
+    &__container {
+        @include media-min(medium) {
+            align-items: center;
+        }
+    }
+
+    &__image {
+        margin: 0;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &--position-right {
+        @include media-min(medium) {
+            .image-and-text__image {
+                order: 2;
+            }
+            .image-and-text__content {
+                order: 1;
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+// Font sizes for headings.
+// Note that format .has-h-#{$i}-font-size is for add_theme_support( 'editor-font-sizes', $font_sizes );
+// In $font_sizes array use slugs `h1`, `h2` etc.
+@for $i from 0 through 6 {
+    .h#{$i},
+    // Format for editor font sizes. For some reason it adds dash around numbers.
+    .has-h-#{$i}-font-size {
+        @include text-style(h#{$i});
+    }
+}

@@ -1,0 +1,86 @@
+{
+    "version": 1,
+    "settings": {
+        "custom": {
+            "color": {
+                "primary": {
+                    "100": "#8bc53f",
+                    "300": "#73ac28",
+                    "500": "#527e17"
+                },
+                "secondary": {
+                    "100": "#1aa2dd",
+                    "300": "#147ca9"
+                },
+                "grey": {
+                    "100": "#f8f4f0",
+                    "200": "#ede5dd",
+                    "300": "#e0d6cc",
+                    "400": "#f3efeb",
+                    "600": "#8b7655",
+                    "900": "#111"
+                },
+                "neutral": {
+                    "white": "#fff"
+                }
+            },
+            "spacing": {
+                "0": "0",
+                "1": "0.5rem",
+                "2": "1rem",
+                "3": "1.5rem",
+                "4": "2rem",
+                "4-5": "2.25rem",
+                "6": "3rem",
+                "8": "4rem",
+                "10": "5rem",
+                "16": "8rem"
+            },
+            "width": {
+                "site-max": "87.5rem",
+                "container": "87.5rem",
+                "container-wide": "72.75rem",
+                "container-medium": "46rem",
+                "container-small": "27.5rem"
+            },
+            "transition": {
+                "3": "0.3s",
+                "4": "0.4s"
+            }
+        },
+        "border": {
+            "customColor": false,
+            "customRadius": false,
+            "customStyle": false,
+            "customWidth": false
+        },
+        "color": {
+            "custom": false,
+            "customGradient": false,
+            "duotone": [],
+            "gradients": [],
+            "link": false,
+            "palette": []
+        },
+        "layout": {
+            "contentSize": "var(--wp--custom--width--container-medium)",
+            "wideSize": "var(--wp--custom--width--container-wide)"
+        },
+        "spacing": {
+            "customMargin": false,
+            "customPadding": false,
+            "units": []
+        },
+        "typography": {
+            "customFontSize": false,
+            "customFontStyle": false,
+            "customFontWeight": false,
+            "customLineHeight": false,
+            "customTextDecorations": false,
+            "customTextTransforms": false,
+            "dropCap": false,
+            "fontFamilies": [],
+            "fontSizes": []
+        }
+    }
+}

@@ -1,0 +1,23 @@
+// Containers.
+.container { // Own container class.
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $container-width-with-padding;
+    padding: 0 $container-side-padding;
+
+    @include media-min(medium) {
+        // @link: https://piccalil.li/quick-tip/use-css-clamp-to-create-a-more-flexible-wrapper-utility/
+        width: 90vw;
+        width: clamp(16rem, 95vw, 100vw);
+    }
+
+    // Make sure that container inside container doesn't have paddings.
+    .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &--medium {
+        max-width: $container-width--medium-with-padding;
+    }
+}

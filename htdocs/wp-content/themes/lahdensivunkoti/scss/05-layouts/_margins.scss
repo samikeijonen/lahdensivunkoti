@@ -1,0 +1,63 @@
+// Default margins for most common elements if they happen to be outside of the content.
+ul,
+ol,
+table,
+p,
+figure {
+    margin: $text-margin 0 0 0;
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+// Default top margin between elements in the content.
+.content-area > * + *,
+.top-margin > * + *,
+.wp-block-column > * + *,
+.wp-block-group > * + *,
+// For editor.
+.block-editor-block-list__layout.is-root-container > * + * {
+    margin-bottom: 0;
+    margin-top: $text-margin;
+}
+
+.top-margin--sm > * + * {
+    margin-bottom: 0;
+    margin-top: var(--wp--custom--spacing--2);
+}
+
+.content-area > {
+    :first-child {
+        @include default-top-margin();
+    }
+
+    :last-child {
+        @include default-bottom-margin();
+    }
+}
+
+.content-area > h2,
+.content-area > h3 {
+    margin-top: 1.5em;
+}
+
+// Helper class for unifying space aroud modules
+.content-row {
+    @include default-top-margin();
+    @include default-bottom-margin();
+    // Make sure that elements with backgrounds have space around the content.
+    // .has-background is also used in WP Core blocks.
+    &.has-background {
+        @include default-top-padding();
+        @include default-bottom-padding();
+        + .has-background {
+            @include default-top-margin();
+        }
+        &:first-child {
+            margin-top: 0;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

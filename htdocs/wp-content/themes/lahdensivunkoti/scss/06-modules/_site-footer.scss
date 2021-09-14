@@ -1,0 +1,23 @@
+.site-footer {
+    @include default-top-padding();
+    @include default-bottom-padding();
+    background-color: var(--wp--custom--color--grey--400);
+}
+
+.site-footer__text {
+    @include font-size(20);
+    max-width: var(--wp--custom--width--container-small);
+}
+
+.site-footer__logo-nav {
+    @include media-min(medium) {
+        align-items: flex-end;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+.site-footer__copyright {
+    @include font-size(16);
+}
