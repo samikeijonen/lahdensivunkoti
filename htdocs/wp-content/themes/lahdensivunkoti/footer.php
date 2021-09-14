@@ -17,8 +17,6 @@
 			</div>
 
 			<div class="site-footer__logo-nav top-margin">
-				<img class="site-title__logo" alt="" width="128" height="52" src="<?php echo esc_url( get_theme_file_uri( 'images/icons/logo-valteri.svg' ) ); ?>">
-
 				<?php get_template_part( 'partials/global/footer-nav' ); ?>
 			</div>
 		</div>
