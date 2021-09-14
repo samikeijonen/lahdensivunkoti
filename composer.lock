@@ -1720,12 +1720,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/samikeijonen/phpcs-composer.git",
-                "reference": "bae7d68e26581ffd2c5775efea7f7621a1bdf5e8"
+                "reference": "140e25e37052e93e82e0fe2b46831868d2a7e196"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/samikeijonen/phpcs-composer/zipball/bae7d68e26581ffd2c5775efea7f7621a1bdf5e8",
-                "reference": "bae7d68e26581ffd2c5775efea7f7621a1bdf5e8",
+                "url": "https://api.github.com/repos/samikeijonen/phpcs-composer/zipball/140e25e37052e93e82e0fe2b46831868d2a7e196",
+                "reference": "140e25e37052e93e82e0fe2b46831868d2a7e196",
                 "shasum": ""
             },
             "require": {
@@ -1759,7 +1759,7 @@
                 "issues": "https://github.com/samikeijonen/phpcs-composer/issues",
                 "source": "https://github.com/samikeijonen/phpcs-composer/tree/main"
             },
-            "time": "2020-12-20T08:35:08+00:00"
+            "time": "2021-09-14T06:39:28+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
