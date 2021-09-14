@@ -106,7 +106,6 @@ function register_gutenberg_templates() {
 	// Check if native hero block exists.
 	if ( meomblocks_block_exists( 'hero' ) ) {
 		$page_object = get_post_type_object( 'page' );
-		$idea_object = get_post_type_object( 'idea' );
 
 		$template = [
 			[
@@ -120,8 +119,6 @@ function register_gutenberg_templates() {
 		];
 
 		$page_object->template = $template;
-		$idea_object->template = $template;
 	}
 }
-// Comment in if you want to use the templates.
 add_action( 'init', 'Kala\register_gutenberg_templates' );
