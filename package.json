@@ -21,18 +21,11 @@
   },
   "dependencies": {
     "@meom/navigation": "^0.3.0",
-    "classnames": "^2.3.1",
-    "normalize.css": "^8.0.1"
+    "classnames": "^2.3.1"
   },
   "devDependencies": {
-    "@wordpress/scripts": "^18.0.0",
-    "autoprefixer": "^10.3.1",
-    "browser-sync": "^2.27.4",
-    "browser-sync-webpack-plugin": "^2.3.0",
-    "glob": "^7.1.7",
-    "prettier": "^2.3.2",
-    "stylelint-order": "^4.1.0",
-    "webpack-remove-empty-scripts": "^0.7.1"
+    "@meom/scripts": "^0.1.4",
+    "stylelint-order": "^4.1.0"
   },
   "scripts": {
     "build": "wp-scripts build --webpack-no-externals",

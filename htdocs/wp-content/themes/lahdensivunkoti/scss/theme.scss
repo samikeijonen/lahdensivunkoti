@@ -22,8 +22,7 @@
 /*--------------------------------------------------------------
 # Generic - Ground-zero styles (resets, box-sizing, etc.).
 --------------------------------------------------------------*/
-/* Include normalize.css via NPM. */
-@import "normalize.css/normalize";
+@import "03-generic/reset";
 @import "03-generic/box-sizing";
 
 

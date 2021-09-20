@@ -1,23 +1,51 @@
 // Project settings, update if needed.
 const projectSettings = {
     projectURL: 'https://lahdensivunkoti.local',
-    projectPath: './htdocs/wp-content/themes/lahdensivunkoti/',
+    themePath: './htdocs/wp-content/themes/lahdensivunkoti/',
+};
+
+// Project variables, do not update.
+const projectVariables = {
     blocksPluginPath: './htdocs/wp-content/plugins/meomblocks/',
     outPutFolder: 'build/',
 };
 
 // Theme entries, update if needed.
-const themeEntries = {
-    main: projectSettings.projectPath + 'js/main.js',
-    'blocks-editor': projectSettings.projectPath + 'js/blocks-editor.js',
-    theme: projectSettings.projectPath + 'scss/theme.scss',
-    editor: projectSettings.projectPath + 'scss/editor.scss',
+const projectEntries = {
+    parentTheme: {
+        entries: {
+            main: projectSettings.themePath + 'js/main.js',
+            'blocks-editor': projectSettings.themePath + 'js/blocks-editor.js',
+            theme: projectSettings.themePath + 'scss/theme.scss',
+            editor: projectSettings.themePath + 'scss/editor.scss',
+        },
+        outPutFolder: projectSettings.themePath + projectVariables.outPutFolder,
+    },
+    blocks: {
+        entries: {
+            // For some reason index.js creates empty folder.
+            main: projectVariables.blocksPluginPath + 'src/main.js',
+        },
+        outPutFolder:
+            projectVariables.blocksPluginPath +
+            projectVariables.outPutFolder +
+            'blocks/',
+        // Set externalType to `blocks` if this is the main block JS file.
+        externalType: 'blocks',
+    },
 };
 
-// Update **only** block related entries.
-const meomblockEntries = {
-    // For some reason index.js creates empty folder.
-    main: projectSettings.blocksPluginPath + 'src/main.js',
+// Generate JS and CSS automatically from wanted folder.
+const generateAutomatically = {
+    name: 'automaticAssets',
+    baseFolder: projectVariables.blocksPluginPath,
+    blob: '{/blocks/**/*.js,/blocks/**/*.scss,/acf-blocks/**/*.js,/acf-blocks/**/*.scss}',
+    ignore: [
+        `${projectVariables.blocksPluginPath}/blocks/**/block.js`,
+        `${projectVariables.blocksPluginPath}/blocks/**/sidebar.js`,
+    ],
+    outPutFolder:
+        projectVariables.blocksPluginPath + projectVariables.outPutFolder,
 };
 
 /**
@@ -38,25 +66,31 @@ const meomblockEntries = {
 const browserSyncSettings = {
     host: 'localhost',
     port: 3000,
-    proxy: projectSettings.projectURL,
+    // Possibility to run different URL for child themes.
+    // For example npm run start --url="https://some.domain.local"
+    proxy: process.env.npm_config_url
+        ? process.env.npm_config_url
+        : projectSettings.projectURL,
     open: true,
     files: [
-        projectSettings.projectPath + projectSettings.outPutFolder + '**/*.js',
-        projectSettings.projectPath + projectSettings.outPutFolder + '**/*.css',
-        projectSettings.projectPath + 'partials/**/*.php',
-        projectSettings.blocksPluginPath +
-            projectSettings.outPutFolder +
+        projectSettings.themePath + projectVariables.outPutFolder + '**/*.js',
+        projectSettings.themePath + projectVariables.outPutFolder + '**/*.css',
+        projectSettings.themePath + '**/*.php',
+        projectVariables.blocksPluginPath +
+            projectVariables.outPutFolder +
             '**/*.js',
-        projectSettings.blocksPluginPath +
-            projectSettings.outPutFolder +
+        projectVariables.blocksPluginPath +
+            projectVariables.outPutFolder +
             '**/*.css',
-        projectSettings.blocksPluginPath + 'blocks/**/*.php',
+        projectVariables.blocksPluginPath + 'blocks/**/*.php',
+        projectVariables.blocksPluginPath + 'acf-blocks/**/*.php',
     ],
 };
 
 module.exports = {
     projectSettings,
-    themeEntries,
-    meomblockEntries,
+    projectVariables,
+    projectEntries,
+    generateAutomatically,
     browserSyncSettings,
 };
