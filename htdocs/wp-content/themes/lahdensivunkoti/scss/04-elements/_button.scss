@@ -1,25 +1,37 @@
 .btn,
-.wp-block-button__link {
+.wp-block-button__link,
+.wp-block-button__link:visited {
     @include font-size(20);
-    background-color: var(--wp--custom--color--primary--100);
-    border: 0.0625rem solid var(--wp--custom--color--primary--500);
-    border-radius: 0.5rem;
-    color: var(--wp--custom--color--grey--900);
+    background-color: var(--wp--custom--color--primary--500);
+    border: 2px solid var(--wp--custom--color--primary--500);
+    border-radius: 0;
+    color: var(--wp--custom--color--neutral--white);
     cursor: pointer;
     display: inline-block;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 1;
-    padding: 0.75rem 1.5rem;
+    padding: var(--wp--custom--spacing--2) var(--wp--custom--spacing--4);
     text-decoration: none;
     transition: background-color var(--wp--custom--transition--3);
 
     &:hover,
+    &:active,
     &:focus {
-        background-color: var(--wp--custom--color--primary--300);
+        background-color: var(--wp--custom--color--grey--900);
+        color: var(--wp--custom--color--neutral--white);
+
+        svg {
+            transform: translateX(var(--wp--custom--spacing--1-2));
+        }
     }
 
     // &--small doesn't work because of elements like button, input
     &.btn--small {
         padding: 0.5rem;
+    }
+
+    svg {
+        margin-left: var(--wp--custom--spacing--1);
+        transition: transform 0.2s;
     }
 }

@@ -64,6 +64,8 @@ function gutenberg_allowed_blocks( $allowed_blocks, $post ) {
 	// Set allowed core blocks.
 	$blocks_to_add = [
 		'core/block',
+		'core/buttons',
+		'core/button',
 		'core/image',
 		'core/paragraph',
 		'core/heading',
@@ -73,6 +75,8 @@ function gutenberg_allowed_blocks( $allowed_blocks, $post ) {
 		'core/quote',
 		'core/columns',
 		'core/group',
+		'core/social-links',
+		'core/social-link',
 	];
 
 	// Set MEOM ACF blocks.
@@ -122,3 +126,50 @@ function register_gutenberg_templates() {
 	}
 }
 add_action( 'init', 'Kala\register_gutenberg_templates' );
+
+
+/**
+ * Add icon to button block.
+ *
+ * @param string $block_content  The block content about to be appended.
+ * @param array  $block          The full block, including name and attributes.
+ *
+ * @return string The block contents, rendered (or altered).
+ */
+function render_block( $block_content, $block ) {
+    if ( 'core/button' === $block['blockName'] ) {
+            $icon = get_svg( 'arrow' );
+
+            $block_content = str_replace( '</a>', $icon . '</a>', $block_content );
+    }
+    if ( 'core/file' === $block['blockName'] ) {
+        $icon = get_svg( 'arrow' );
+
+        $block_content = str_replace( '</a></div>', $icon . '</a></div>', $block_content );
+    }
+
+    return $block_content;
+}
+add_filter( 'render_block', 'Kala\render_block', 10, 2 );
+
+/**
+ * Add reusable blocks to admin menu.
+ *
+ * @param mixed $type Post type.
+ * @param mixed $args Arguments for post type.
+ * @return void Modified post type arguments.
+ */
+function reusable_menu_display( $type, $args ) {
+    // Bail if post type is not `wp_block` (reusable blocks).
+    if ( 'wp_block' !== $type ) {
+        return;
+    }
+
+    $args->show_in_menu      = true;
+    $args->_builtin          = false;
+    $args->labels->name      = esc_html__( 'Global content', 'kala' );
+    $args->labels->menu_name = esc_html__( 'Global content', 'kala' );
+    $args->menu_icon         = 'dashicons-screenoptions';
+    $args->menu_position     = 58;
+}
+add_action( 'registered_post_type', 'Kala\reusable_menu_display', 10, 2 );
