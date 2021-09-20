@@ -67,8 +67,8 @@
 .site-nav__toggle {
     @include font-size(20);
     background-color: transparent;
-    border: 0.0625rem solid var(--wp--custom--color--primary--500);
-    border-radius: 0.5rem;
+    border: 2px solid var(--wp--custom--color--primary--500);
+    border-radius: 0;
     color: var(--wp--custom--color--grey--900);
     font-weight: 700;
     line-height: 1;
