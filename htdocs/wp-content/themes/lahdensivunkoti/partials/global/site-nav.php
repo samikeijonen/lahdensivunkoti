@@ -15,6 +15,17 @@ endif;
 		<?php esc_html_e( 'Menu', 'lahdensivunkoti' ); ?>
 	</button>
 	<?php
+		$social_links = wp_nav_menu(
+			[
+				'theme_location' => 'social_links',
+				'menu_class'     => 'wp-block-social-links wp-block-social-links--header',
+				'container'      => false,
+				'echo'           => false,
+				'link_before'    => '<span class="screen-reader-text">',
+				'link_after'     => '</span>',
+			]
+		);
+
 		wp_nav_menu(
 			[
 				'theme_location' => 'main',
@@ -22,6 +33,7 @@ endif;
 				'menu_class'     => 'site-nav__items animated js-site-nav-items',
 				'container'      => false,
 				'depth'          => 1,
+				'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s' . $social_links . '</ul>',
 			]
 		);
 		?>
