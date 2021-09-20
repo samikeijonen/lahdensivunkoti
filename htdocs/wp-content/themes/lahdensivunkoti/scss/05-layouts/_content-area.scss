@@ -37,6 +37,17 @@
     }
 }
 
+.content-area > .alignwide,
+.content-area > .alignfull {
+    @include small-top-margin();
+    @include small-bottom-margin();
+}
+
+// Set all alignfull elements margin-top to zero, if they are first block.
+.content-area > .alignfull:first-child {
+    margin-top: 0;
+}
+
 .alignwide {
     max-width: var(--wp--custom--width--container-wide);
 }

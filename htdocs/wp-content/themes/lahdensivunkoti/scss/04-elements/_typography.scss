@@ -21,8 +21,16 @@ body {
     background-color: var(--wp--custom--color--neutral--white);
 }
 
-a {
-    color: inherit;
+a,
+a:visited {
+    color: var(--wp--custom--color--primary--500);
+    transition: color var(--wp--custom--transition--3);
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: var(--wp--custom--color--grey--900);
+    }
 }
 
 h1,

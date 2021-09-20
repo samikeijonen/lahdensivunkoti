@@ -42,9 +42,13 @@
 }
 
 .site-nav__items a {
-    text-decoration: none;
+    @include font-size(14);
     display: block;
+    font-weight: 700;
+    letter-spacing: 0.05em;
     padding: var(--wp--custom--spacing--2);
+    text-decoration: none;
+    text-transform: uppercase;
 
     @include media-min(navigation) {
         padding: var(--wp--custom--spacing--1) 0;
@@ -66,7 +70,7 @@
     border: 0.0625rem solid var(--wp--custom--color--primary--500);
     border-radius: 0.5rem;
     color: var(--wp--custom--color--grey--900);
-    font-weight: 600;
+    font-weight: 700;
     line-height: 1;
     padding: var(--wp--custom--spacing--2) var(--wp--custom--spacing--3);
     position: relative;

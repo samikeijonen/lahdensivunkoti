@@ -30,10 +30,22 @@
 
 .wp-block-button {
     display: inline-block;
-    margin-right: 0.5rem;
+    margin-right: var(--wp--custom--spacing--3);
 
     &:last-child {
         margin-right: 0;
+    }
+}
+
+.is-style-secondary .wp-block-button__link {
+    background-color: transparent;
+    color: var(--wp--custom--color--primary--500);
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: transparent;
+        color: var(--wp--custom--color--grey--900);
     }
 }
 
@@ -166,6 +178,7 @@
             margin-right: $gutter;
         }
     }
+
     .alignright {
         float: none;
         margin-left: 0;
@@ -174,15 +187,12 @@
             margin-left: $gutter;
         }
     }
-    &.alignwide,
-    &.alignfull {
-        @include small-top-margin();
-        @include small-bottom-margin();
-    }
+
     figcaption {
         color: inherit;
         text-align: center;
     }
+
     &.is-style-rounded img {
         // We use an absolute pixel to prevent the oval shape that a value of 50% would give
         // to rectangular images. A pill-shape is better than otherwise.
@@ -195,10 +205,10 @@
 blockquote {
     @include small-top-margin();
     @include small-bottom-margin();
-    @include font-size(32);
+    @include font-size(22);
 
-    @include media(medium) {
-        @include font-size(24);
+    @include media-min(medium) {
+        @include font-size(26);
     }
 
     cite,
@@ -219,3 +229,71 @@ blockquote {
     font-weight: 700;
     text-transform: uppercase;
 }
+
+// Social links.
+ul.wp-block-social-links {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding-left: 0;
+
+    // Icon sizes.
+    // Small.
+    &.has-small-icon-size {
+        @include font-size(16);
+    }
+
+    // Normal/default.
+    &,
+    &.has-normal-icon-size {
+        @include font-size(22);
+    }
+
+    // Large.
+    &.has-large-icon-size {
+        @include font-size(32);
+    }
+
+    // Huge.
+    &.has-huge-icon-size {
+        @include font-size(48);
+    }
+
+    // Center flex items. This has an equivalent in editor.scss.
+    // It also needs to override some of the default classes usually applied to the centering class.
+    // align left must not be set, because this is the default (flex-start).
+    &.aligncenter,
+    &.items-justified-center {
+        justify-content: center;
+    }
+
+    &.alignright,
+    &.items-justified-right {
+        justify-content: flex-end;
+    }
+
+    &.items-justified-space-between {
+        justify-content: space-between;
+    }
+}
+
+.wp-block-social-links > li {
+    margin-right: var(--wp--custom--spacing--3);
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    svg {
+        height: 1.5em;
+        width: 1.5em;
+    }
+}
+
+.wp-block-social-links--footer a,
+.wp-block-social-links--footer a:hover,
+.wp-block-social-links--footer a:active,
+.wp-block-social-links--footer a:focus {
+    color: var(--wp--custom--color--neutral--white);
+}
+

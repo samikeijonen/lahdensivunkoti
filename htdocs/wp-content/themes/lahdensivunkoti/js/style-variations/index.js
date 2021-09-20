@@ -7,16 +7,16 @@ wp.domReady(() => {
     wp.blocks.unregisterBlockStyle('core/button', 'squared');
     wp.blocks.unregisterBlockStyle('core/button', 'fill');
 
+	 // Register button styles.
+	 wp.blocks.registerBlockStyle('core/button', {
+        name: 'secondary',
+        label: __('Secondary', 'lahdensivunkoti'),
+    });
+
     // Unregister quote styles.
     wp.blocks.unregisterBlockStyle('core/quote', 'large');
     wp.blocks.unregisterBlockStyle('core/quote', 'default');
 
     // Unregister table styles.
     wp.blocks.unregisterBlockStyle('core/table', 'stripes');
-
-    // Register paragraph styles.
-    wp.blocks.registerBlockStyle('core/paragraph', {
-        name: 'all-caps',
-        label: __('All caps', 'lahdensivunkoti'),
-    });
 });

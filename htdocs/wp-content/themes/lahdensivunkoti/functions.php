@@ -34,8 +34,9 @@ function setup() {
 	// Register menus.
 	register_nav_menus(
 		[
-			'main'   => esc_html__( 'Main', 'lahdensivunkoti' ),
-			'footer' => esc_html__( 'Footer', 'lahdensivunkoti' ),
+			'main'         => esc_html__( 'Main', 'lahdensivunkoti' ),
+			'footer'       => esc_html__( 'Footer', 'lahdensivunkoti' ),
+			'social_links' => esc_html__( 'Social links', 'lahdensivunkoti' ),
 		]
 	);
 }
