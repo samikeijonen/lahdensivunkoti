@@ -4,7 +4,7 @@
         "custom": {
             "color": {
                 "primary": {
-                    "100": "#8bc53f",
+                    "100": "#effaef",
                     "300": "#73ac28",
                     "500": "#0a260a"
                 },
@@ -15,8 +15,8 @@
                 },
                 "grey": {
                     "100": "#f8f4f0",
-                    "200": "#ede5dd",
-                    "300": "#e0d6cc",
+                    "200": "#efefef",
+                    "300": "#ddd",
                     "400": "#f3efeb",
                     "600": "#8b7655",
                     "700": "#555",
@@ -46,7 +46,7 @@
             "width": {
                 "site-max": "120rem",
                 "container": "87.5rem",
-                "container-wide": "72.75rem",
+                "container-wide": "67rem",
                 "container-medium": "46rem",
                 "container-small": "27.5rem"
             },
