@@ -12,6 +12,8 @@
 
 body .editor-styles-wrapper {
     @include text-style(body);
+    font-family: var(--wp--custom--font--sans);
+    color: var(--wp--custom--color--grey--900);
 
     /*--------------------------------------------------------------
     # Elements - Unclassed HTML elements (type selectors).

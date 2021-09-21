@@ -9,7 +9,7 @@ const { InnerBlocks, useBlockProps } = wp.blockEditor;
 import block from './block.json';
 import FeaturedImage from '../../components/featured-image';
 
-const ALLOWED_BLOCKS = ['core/paragraph', 'core/heading'];
+const ALLOWED_BLOCKS = ['core/paragraph', 'core/heading', 'core/buttons'];
 const TEMPLATE = [
     ['core/heading', { level: 1 }],
     ['core/paragraph', {}],

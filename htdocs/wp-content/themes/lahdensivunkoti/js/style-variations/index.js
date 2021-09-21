@@ -13,6 +13,11 @@ wp.domReady(() => {
         label: __('Secondary', 'lahdensivunkoti'),
     });
 
+	 wp.blocks.registerBlockStyle('core/button', {
+        name: 'white-bg',
+        label: __('White background', 'lahdensivunkoti'),
+    });
+
     // Unregister quote styles.
     wp.blocks.unregisterBlockStyle('core/quote', 'large');
     wp.blocks.unregisterBlockStyle('core/quote', 'default');
