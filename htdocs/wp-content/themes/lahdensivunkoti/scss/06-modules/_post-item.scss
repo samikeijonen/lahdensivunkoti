@@ -17,21 +17,10 @@
 }
 
 .post-item {
-    background-color: var(--wp--custom--color--grey--200);
+    background-color: var(--wp--custom--color--neutral--white);
     border: 1px solid var(--wp--custom--color--grey--300);
-    border-radius: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 27.75rem;
-    padding: var(--wp--custom--spacing--6) var(--wp--custom--spacing--4-5);
     position: relative;
     transition: background-color var(--wp--custom--transition--4), border var(--wp--custom--transition--4);
-
-    @include media(medium) {
-        min-height: 16rem;
-        padding: var(--wp--custom--spacing--4);
-    }
 
     &:focus-within,
     &:hover {
@@ -55,9 +44,8 @@
             z-index: 0;
         }
     }
+}
 
-    .icon {
-        color: var(--wp--custom--color--grey--600);
-        transition: all var(--wp--custom--transition--4);
-    }
+.post-item__content {
+    padding: var(--wp--custom--spacing--6) var(--wp--custom--spacing--4-5);
 }

@@ -2,12 +2,17 @@
     text-align: center;
 }
 
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--wp--custom--spacing--1);
+    justify-content: center;
+}
+
 .page-numbers {
-    display: inline-block;
-    width: 2rem;
-    height: 2rem;
-    padding: 0.5rem 0.125rem;
-    line-height: 1rem;
+    display: block;
+    padding: 1rem 1.25rem;
+    line-height: 1;
     text-align: center;
 
     &.prev,
@@ -15,20 +20,12 @@
         width: auto;
     }
 
+    &.prev svg {
+        transform: rotate(180deg);
+    }
+
     &.current {
-        background-color: var(--wp--custom--color--primary--100);
-        color: #fff;
-    }
-}
-
-.posts-navigation {
-    @include clearfix();
-
-    .nav-previous {
-        float: left;
-    }
-
-    .nav-next {
-        float: right;
+        background-color: var(--wp--custom--color--grey--200);
+        color: var(--wp--custom--color--primary--500);
     }
 }

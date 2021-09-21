@@ -9,6 +9,9 @@
         },
         {
             "slug": "image-and-text"
+        },
+        {
+            "slug": "latest-posts"
         }
     ],
     "acf_blocks": {}
