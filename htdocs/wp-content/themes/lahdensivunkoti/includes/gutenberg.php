@@ -35,6 +35,20 @@ function gutenberg_styles() {
 		filemtime( get_theme_file_path( 'build/blocks-editor.js' ) ),
 		true
 	);
+
+    /**
+     * Filters the allowed embeds.
+     *
+     * @param array $allowed_embed_variants Default allowed embeds.
+     */
+    $allowed_embed_variants = \apply_filters( 'lahdensivunkoti_allowed_embed_variants', [ 'youtube', 'vimeo' ] );
+
+    // Data to JS.
+    $data_array = [
+        'allowedEmbedVariants' => $allowed_embed_variants,
+    ];
+
+    wp_localize_script( 'gutenberg-scripts-editor', 'lahdenSivunKotiGutenbergData', $data_array );
 }
 add_action( 'enqueue_block_editor_assets', 'Kala\gutenberg_styles' );
 
