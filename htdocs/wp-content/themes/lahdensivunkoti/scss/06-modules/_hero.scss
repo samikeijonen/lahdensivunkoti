@@ -23,7 +23,8 @@
         align-items: center;
         display: flex;
         flex-direction: row;
-        max-width: var(--wp--custom--width--container-wide);
+        // Plus side paddings.
+        max-width: calc(var(--wp--custom--width--container-wide) + var(--side-padding) * 2);
         min-height: 20rem;
 
         @include media-min(medium) {

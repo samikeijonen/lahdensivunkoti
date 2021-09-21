@@ -4,20 +4,22 @@
     margin-right: auto;
 }
 
-// Side padding.
-.x-padding {
-    padding-left: var(--wp--custom--spacing--2);
-    padding-right: var(--wp--custom--spacing--2);
+body {
+    --side-padding: var(--wp--custom--spacing--2);
 
     @include media-min(medium) {
-        padding-left: var(--wp--custom--spacing--4);
-        padding-right: var(--wp--custom--spacing--4);
+        --side-padding: var(--wp--custom--spacing--4);
     }
 
     @include media-min(navigation) {
-        padding-left: var(--wp--custom--spacing--6);
-        padding-right: var(--wp--custom--spacing--6);
+        --side-padding: var(--wp--custom--spacing--6);
     }
+}
+
+// Side padding.
+.x-padding {
+    padding-left: var(--side-padding);
+    padding-right: var(--side-padding);
 }
 
 .alignwide {
@@ -29,17 +31,7 @@
 }
 
 .alignmax {
-    margin-left: calc(var(--wp--custom--spacing--2) * -1);
-    margin-right: calc(var(--wp--custom--spacing--2) * -1);
+    margin-left: calc(var(--side-padding) * -1);
+    margin-right: calc(var(--side-padding) * -1);
     max-width: none;
-
-    @include media-min(medium) {
-        margin-left: calc(var(--wp--custom--spacing--4) * -1);
-        margin-right: calc(var(--wp--custom--spacing--4) * -1);
-    }
-
-    @include media-min(navigation) {
-        margin-left: calc(var(--wp--custom--spacing--6) * -1);
-        margin-right: calc(var(--wp--custom--spacing--6) * -1);
-    }
 }
