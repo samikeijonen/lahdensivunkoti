@@ -14,6 +14,7 @@ input,
 select,
 textarea {
     @include text-style(body);
+    font-family: var(--wp--custom--font--sans);
     color: var(--wp--custom--color--grey--900);
 }
 
@@ -54,6 +55,7 @@ h6 {
 // We want to make sure utility classes overwrite font-size even if something have been changed for example in modules.
 h1 {
     @include text-style(h1);
+    font-family: var(--wp--custom--font--sans-heading);
 }
 
 h2 {

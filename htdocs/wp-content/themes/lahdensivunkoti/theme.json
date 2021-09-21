@@ -19,12 +19,17 @@
                     "300": "#e0d6cc",
                     "400": "#f3efeb",
                     "600": "#8b7655",
+                    "700": "#555",
                     "900": "#222"
                 },
                 "neutral": {
                     "white": "#fff"
                 }
             },
+			"font": {
+				"sans": "Montserrat, sans-serif;",
+				"sans-heading": "Cormorant SC, sans-serif;"
+			},
             "spacing": {
                 "0": "0",
                 "1/2": "0.25rem",

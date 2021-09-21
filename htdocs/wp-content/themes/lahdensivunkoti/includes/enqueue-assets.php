@@ -60,8 +60,9 @@ add_action( 'enqueue_block_assets', 'Kala\enqueue_block_assets' );
  */
 function preload_fonts() {
 	$fonts = [
-		THEME_URI . '/fonts/lato-v20-latin-regular.woff2' => 'woff2',
-		THEME_URI . '/fonts/lato-v20-latin-700.woff2' => 'woff2',
+		THEME_URI . '/fonts/montserrat-v18-latin-regular.woff2' => 'woff2',
+		THEME_URI . '/fonts/montserrat-v18-latin-700.woff2' => 'woff2',
+		THEME_URI . '/fonts/cormorant-sc-v11-latin-700.woff2' => 'woff2',
 	];
 	foreach ( $fonts as $font_link => $font_type ) {
 		echo '<link rel="preload" href="' . esc_url( $font_link ) . '" as="font" type="font/' . esc_attr( $font_type ) . '" crossorigin>';

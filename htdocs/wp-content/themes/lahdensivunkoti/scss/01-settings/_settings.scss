@@ -10,10 +10,8 @@ $text-margin: var(--wp--custom--spacing--4);            // Basic margin used in 
 $gutter: var(--wp--custom--spacing--4-5);                 // Space between columns.
 
 // Typography settings.
-$base-font-family: "Lato", sans-serif;
 $text-styles: (
     body: (
-        font-family: $base-font-family,
         font-size: 22,
         line-height: 1.6,
         font-weight: 400,

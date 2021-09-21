@@ -43,8 +43,9 @@
 
 .site-nav__items a {
     @include font-size(14);
+    color: var(--wp--custom--color--grey--700);
     display: block;
-    font-weight: 700;
+    font-weight: 500;
     letter-spacing: 0.05em;
     padding: var(--wp--custom--spacing--2);
     text-decoration: none;
@@ -70,7 +71,7 @@
     border: 2px solid var(--wp--custom--color--primary--500);
     border-radius: 0;
     color: var(--wp--custom--color--grey--900);
-    font-weight: 700;
+    font-weight: 500;
     line-height: 1;
     padding: var(--wp--custom--spacing--2) var(--wp--custom--spacing--3);
     position: relative;
