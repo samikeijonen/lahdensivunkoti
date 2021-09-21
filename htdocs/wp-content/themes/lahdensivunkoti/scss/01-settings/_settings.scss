@@ -6,13 +6,12 @@ $container-side-padding-2x: var(--wp--custom--spacing--6);
 $container-width-with-padding: calc(var(--wp--custom--width--container) + var(--wp--custom--spacing--6));
 $container-width--medium-with-padding: calc(var(--wp--custom--width--container-medium) + var(--wp--custom--spacing--6));
 
-$text-margin: var(--wp--custom--spacing--4);            // Basic margin used in typography elements
-$gutter: var(--wp--custom--spacing--4-5);                 // Space between columns.
+$gutter: var(--wp--custom--spacing--4-5);
 
 // Typography settings.
 $text-styles: (
     body: (
-        font-size: 22,
+        font-size: 20,
         line-height: 1.6,
         font-weight: 400,
         media-queries: (
@@ -22,16 +21,16 @@ $text-styles: (
         )
     ),
     h1: (
-        font-size: 72,
+        font-size: 68,
         line-height: 1.14,
         font-weight: 700,
         media-queries: (
             medium-large: (
-                font-size: 56,
+                font-size: 42,
                 line-height: 1.2,
             ),
             small: (
-                font-size: 40,
+                font-size: 32,
                 line-height: 1.2,
             ),
         )
@@ -93,8 +92,8 @@ $text-styles: (
 $breakpoints: (
     max: var(--wp--custom--width--site-max),    // The whole site
     large: $container-width, // Basic container
-    navigation: 60rem,       // Navigation depends on the project
-    medium-large: 55rem,     // Bigger tablet size
-    medium: 48rem,           // Small tablet size: 768px
-    small: 26rem             // Phone size: 416px
+    navigation: 60em,       // Navigation depends on the project
+    medium-large: 55em,     // Bigger tablet size
+    medium: 48em,           // Small tablet size: 768px
+    small: 26em             // Phone size: 416px
 );

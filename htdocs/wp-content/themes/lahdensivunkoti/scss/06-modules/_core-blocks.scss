@@ -2,6 +2,7 @@
 .wp-block-buttons {
     display: flex;
     flex-wrap: wrap;
+    gap: var(--wp--custom--spacing--3);
 
     &.is-vertical {
         flex-direction: column;
@@ -30,11 +31,6 @@
 
 .wp-block-button {
     display: inline-block;
-    margin-right: var(--wp--custom--spacing--3);
-
-    &:last-child {
-        margin-right: 0;
-    }
 }
 
 .is-style-secondary .wp-block-button__link {
@@ -46,6 +42,22 @@
     &:focus {
         background-color: transparent;
         color: var(--wp--custom--color--grey--900);
+    }
+}
+
+.is-style-white-bg .wp-block-button__link {
+    background-color: var(--wp--custom--color--neutral--white);
+    color: var(--wp--custom--color--primary--500);
+
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: var(--wp--custom--color--neutral--white);
+        color: var(--wp--custom--color--grey--900);
+    }
+
+    &:focus {
+        outline-color: var(--wp--custom--color--neutral--white);
     }
 }
 
@@ -205,17 +217,29 @@
 blockquote {
     @include small-top-margin();
     @include small-bottom-margin();
-    @include font-size(22);
 
-    @include media-min(medium) {
-        @include font-size(26);
+    p {
+        @include font-size(22);
+        font-weight: 500;
+
+        @include media-min(medium) {
+            @include font-size(26);
+        }
     }
 
     cite,
     // Editor only have this class, not <cite> markup.
     .wp-block-quote__citation {
         font-style: normal;
+        display: block;
+        margin-top: var(--wp--custom--spacing--2);
     }
+}
+
+.image-and-text__content .wp-block-quote,
+.image-and-text__content blockquote {
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 // Table block.

@@ -15,6 +15,9 @@ const ALLOWED_BLOCKS = [
     'core/paragraph',
     'core/heading',
     'core/button',
+    'core/quote',
+    'core/social-links',
+    'core/social-link',
 ];
 const TEMPLATE = [
     ['core/heading', {}],

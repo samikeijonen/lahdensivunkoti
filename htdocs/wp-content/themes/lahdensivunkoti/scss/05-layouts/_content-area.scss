@@ -47,11 +47,3 @@
 .content-area > .alignfull:first-child {
     margin-top: 0;
 }
-
-.alignwide {
-    max-width: var(--wp--custom--width--container-wide);
-}
-
-.alignfull {
-    max-width: none;
-}

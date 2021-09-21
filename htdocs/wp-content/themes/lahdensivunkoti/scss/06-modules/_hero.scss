@@ -1,33 +1,59 @@
 .hero {
     @include small-top-padding();
     @include small-bottom-padding();
+    background-color: var(--wp--custom--color--primary--500);
     margin-bottom: 0;
+    position: relative;
+
+    &::before {
+        background-color: var(--wp--custom--color--primary--500);
+        bottom: 0;
+        content: "";
+        height: 100%;
+        left: 0;
+        opacity: 0.5;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        z-index: 5;
+    }
 
     &__container {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        max-width: var(--wp--custom--width--container-wide);
+        min-height: 20rem;
+
         @include media-min(medium) {
-            align-items: center;
-        }
-
-        a.is-style-all-caps {
-            text-decoration: none;
-            vertical-align: middle;
-            &:focus,
-            &:hover {
-                text-decoration: underline;
-            }
-
-            .icon {
-                margin-right: 0.5rem;
-            }
+            min-height: 30rem;
         }
     }
+
+    &__content {
+        color: var(--wp--custom--color--neutral--white);
+        max-width: var(--wp--custom--width--container-medium);
+        position: relative;
+        z-index: 10;
+    }
+
     &__image {
 
         @include media(medium) {
             margin: 0;
         }
+
         img {
+            bottom: 0;
+            height: 100%;
+            left: 0;
+            object-fit: cover;
+            position: absolute;
+            right: 0;
+            top: 0;
             width: 100%;
+            z-index: 0;
         }
     }
 }
