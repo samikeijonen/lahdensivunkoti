@@ -61,7 +61,7 @@ body .editor-styles-wrapper {
     margin-left: auto !important;
     margin-right: auto !important;
     max-width: var(--wp--custom--width--container--medium);
-    padding: 0 $container-side-padding;
+    padding: 0 var(--wp--custom--spacing--6);
 }
 
 // Full width.
