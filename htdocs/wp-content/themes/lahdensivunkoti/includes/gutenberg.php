@@ -181,8 +181,8 @@ function reusable_menu_display( $type, $args ) {
 
     $args->show_in_menu      = true;
     $args->_builtin          = false;
-    $args->labels->name      = esc_html__( 'Global content', 'kala' );
-    $args->labels->menu_name = esc_html__( 'Global content', 'kala' );
+    $args->labels->name      = esc_html__( 'Global content', 'lahdensivunkoti' );
+    $args->labels->menu_name = esc_html__( 'Global content', 'lahdensivunkoti' );
     $args->menu_icon         = 'dashicons-screenoptions';
     $args->menu_position     = 58;
 }
