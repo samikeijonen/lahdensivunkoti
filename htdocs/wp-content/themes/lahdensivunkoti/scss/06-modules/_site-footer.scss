@@ -13,3 +13,7 @@
 .site-footer__copyright {
     @include font-size(16);
 }
+
+.site-footer a:focus {
+    outline-color: var(--wp--custom--color--neutral--white);
+}

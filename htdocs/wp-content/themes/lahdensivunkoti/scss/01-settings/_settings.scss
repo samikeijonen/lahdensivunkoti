@@ -1,11 +1,3 @@
-// Margins and widths.
-$container-width: var(--wp--custom--width--container);  // Default container, 1208px
-$container-width--medium: var(--wp--custom--width--container-medium); // Medium container for basic text etc, 797px
-$container-side-padding: var(--wp--custom--spacing--3); // Padding for container left and right.
-$container-side-padding-2x: var(--wp--custom--spacing--6);
-$container-width-with-padding: calc(var(--wp--custom--width--container) + var(--wp--custom--spacing--6));
-$container-width--medium-with-padding: calc(var(--wp--custom--width--container-medium) + var(--wp--custom--spacing--6));
-
 $gutter: var(--wp--custom--spacing--4-5);
 
 // Typography settings.
@@ -90,10 +82,8 @@ $text-styles: (
 );
 
 $breakpoints: (
-    max: var(--wp--custom--width--site-max),    // The whole site
-    large: $container-width, // Basic container
-    navigation: 60em,       // Navigation depends on the project
-    medium-large: 55em,     // Bigger tablet size
-    medium: 48em,           // Small tablet size: 768px
-    small: 26em             // Phone size: 416px
+    navigation: 70em,
+    medium-large: 55em,
+    medium: 48em,
+    small: 26em
 );
