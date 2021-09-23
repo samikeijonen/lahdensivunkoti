@@ -15,10 +15,10 @@
     word-wrap: normal !important;
 
     &:focus {
-        background-color: var(--wp--custom--color--secondary--100);
+        background-color: var(--wp--custom--color--primary--500);
         clip: auto !important;
         clip-path: none;
-        color: #fff;
+        color: var(--wp--custom--color--neutral--white);
         display: block;
         @include font-size(14);
         font-weight: 800;

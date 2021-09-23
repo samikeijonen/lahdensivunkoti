@@ -22,8 +22,7 @@ body {
     background-color: var(--wp--custom--color--grey--200);
 }
 
-a,
-a:visited {
+a {
     color: var(--wp--custom--color--primary--500);
     transition: color var(--wp--custom--transition--3);
 
@@ -32,6 +31,10 @@ a:visited {
     &:focus {
         color: var(--wp--custom--color--grey--900);
     }
+}
+
+a:visited {
+    color: inherit;
 }
 
 h1,

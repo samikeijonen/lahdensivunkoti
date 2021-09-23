@@ -4,17 +4,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Lahdensivun koti 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/lahdensivunkoti\n"
-"POT-Creation-Date: 2021-09-23T15:10:54+03:00\n"
-"PO-Revision-Date: 2021-09-23 15:16+0300\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: fi_FI\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0\n"
+"POT-Creation-Date: 2021-09-23T15:10:54+03:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: lahdensivunkoti\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Theme Name of the theme
 msgid "Lahdensivun koti"
@@ -27,7 +25,7 @@ msgstr ""
 
 #. Description of the theme
 msgid "Lahdensivun koti Theme"
-msgstr "Lahdensivun koti teema"
+msgstr ""
 
 #. Author of the theme
 msgid "Sami Keijonen"
@@ -35,51 +33,55 @@ msgstr ""
 
 #: 404.php:11
 msgid "404 - Not Found"
-msgstr "404 - sivua ei löytynyt"
+msgstr ""
 
 #: 404.php:12
 msgid "Unfortunately, we didn’t find anything."
-msgstr "Valitettavasti emme löytäneet mitään."
+msgstr ""
 
-#: functions.php:37 partials/global/site-nav.php:13
+#: functions.php:37
+#: partials/global/site-nav.php:13
 msgid "Main"
-msgstr "Pää"
+msgstr ""
 
-#: functions.php:38 partials/global/footer-nav.php:13
+#: functions.php:38
+#: partials/global/footer-nav.php:13
 msgid "Footer"
-msgstr "Alapalkki"
+msgstr ""
 
-#: functions.php:39 partials/global/social-links-nav.php:13
+#: functions.php:39
+#: partials/global/social-links-nav.php:13
 msgid "Social links"
-msgstr "Somelinkit"
+msgstr ""
 
 #: header.php:14
 msgid "Skip to content"
-msgstr "Siirry sisältöön"
+msgstr ""
 
 #: home.php:28
 msgid "Previous page"
-msgstr "Edellinen sivu"
+msgstr ""
 
 #: home.php:29
 msgid "Next page"
-msgstr "Seuraava sivu"
+msgstr ""
 
 #: home.php:30
 msgid "Page"
-msgstr "Sivu"
+msgstr ""
 
 #: home.php:35
 msgid "Unfortunately no posts were found"
-msgstr "Valitettavasti artikkeleita ei löytynyt"
+msgstr ""
 
-#: includes/gutenberg.php:184 includes/gutenberg.php:185
+#: includes/gutenberg.php:184
+#: includes/gutenberg.php:185
 msgid "Global content"
-msgstr "Globaali sisältö"
+msgstr ""
 
 #: partials/global/site-nav.php:15
 msgid "Menu"
-msgstr "Valikko"
+msgstr ""
 
 #: partials/post/posts-lift.php:11
 msgid "Ajankohtaista"
@@ -87,14 +89,16 @@ msgstr ""
 
 #. Template Name of the theme
 msgid "Style Guide"
-msgstr "Style Guide"
+msgstr ""
 
-#: build/blocks-editor.js:47 js/style-variations/index.js:13
+#: build/blocks-editor.js:47
+#: js/style-variations/index.js:13
 #: build/blocks-editor.js:29
 msgid "Secondary"
-msgstr "Toissijainen"
+msgstr ""
 
-#: build/blocks-editor.js:51 js/style-variations/index.js:18
+#: build/blocks-editor.js:51
+#: js/style-variations/index.js:18
 #: build/blocks-editor.js:34
 msgid "White background"
-msgstr "Valkoinen tausta"
+msgstr ""
