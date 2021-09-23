@@ -27,6 +27,7 @@ while ( have_posts() ) :
 		}
 
 		.tokens__color {
+			border: 1px solid #e3e9eb;
 			border-radius: 50%;
 			display: block;
 			height: 5rem;
@@ -53,7 +54,7 @@ while ( have_posts() ) :
 		<ul class="tokens tokens--colors grid has-4-columns">
 			<?php foreach ( $value as $color ) : ?>
 				<li class="tokens__item">
-					<span class="tokens__color" style="background-color: <?php echo esc_attr( $color ); ?>; border-color: #f3f3f3;"></span>
+					<span class="tokens__color" style="background-color: <?php echo esc_attr( $color ); ?>;"></span>
 					<p class="tokens__label tokens__label--color"><?php echo esc_html( $color ); ?></p>
 				</li>
 			<?php endforeach; ?>
