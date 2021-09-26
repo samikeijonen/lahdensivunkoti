@@ -46,7 +46,8 @@
 
     "seravo/seravo-plugin": "*",
 
-    "wpackagist-plugin/wordpress-seo": "*"
+    "wpackagist-plugin/wordpress-seo": "*",
+    "wpackagist-plugin/imagify": "*"
   },
   "extra": {
     "installer-paths": {
