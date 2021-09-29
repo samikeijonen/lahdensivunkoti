@@ -23,11 +23,14 @@ body {
     padding-right: var(--side-padding);
 }
 
+.alignregular {
+    max-width: var(--wp--custom--width--container-medium);
+}
+
 .alignwide {
     max-width: var(--wp--custom--width--container-wide);
 }
 
-.alignmax,
 .alignfull {
     margin-left: calc(var(--side-padding) * -1);
     margin-right: calc(var(--side-padding) * -1);

@@ -11,7 +11,7 @@ use function Kala\display_svg;
 $image_id    = Kala\get_variable( $image_id );
 $content     = Kala\get_variable( $content );
 $extra_class = Kala\get_variable( $extra_class );
-$class       = 'hero content-row alignmax ' . $extra_class;
+$class       = 'hero content-row alignfull ' . $extra_class;
 
 if ( $content ) : ?>
 	<div class="<?php echo esc_html( $class ); ?>">

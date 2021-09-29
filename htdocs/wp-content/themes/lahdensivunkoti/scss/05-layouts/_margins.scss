@@ -21,6 +21,10 @@ figure {
     margin-top: var(--wp--custom--spacing--4);
 }
 
+.top-margin--xl > * + * {
+    margin-top: var(--wp--custom--spacing--6);
+}
+
 .top-margin--md > * + * {
     margin-top: var(--wp--custom--spacing--3);
 }
@@ -61,6 +65,14 @@ figure {
 // Set all alignfull elements margin-top to zero, if they are first block.
 .content-area > .alignfull:first-child,
 .content-area .has-background + .has-background,
-.content-area .has-background + .image-and-text {
+.content-area .has-background + .image-and-text,
+.content-area .image-and-text + .has-background,
+.content-area .social-links + .has-background,
+.content-area .social-links + .image-and-text {
     margin-top: 0;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
 }

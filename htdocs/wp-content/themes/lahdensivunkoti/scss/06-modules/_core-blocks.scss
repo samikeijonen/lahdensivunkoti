@@ -261,6 +261,24 @@ blockquote {
 }
 
 // Social links.
+.social-links {
+    background-color: var(--wp--custom--color--grey--100);
+    padding-bottom: var(--wp--custom--spacing--6);
+    padding-top: var(--wp--custom--spacing--6);
+}
+
+.social-links__wrapper {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--wp--custom--spacing--2);
+    justify-content: space-between;
+}
+
+.social-links__text {
+    @include text-style(h2-bigger);
+}
+
 ul.wp-block-social-links {
     display: flex;
     flex-wrap: wrap;
@@ -323,15 +341,22 @@ ul.wp-block-social-links {
 .wp-block-social-links--header {
     margin-top: 0;
 
+    > li svg {
+        @include media-min(navigation) {
+            top: -0.2em;
+        }
+    }
+
     @include media(navigation) {
         justify-content: center;
     }
 }
 
-.wp-block-social-links--footer a,
-.wp-block-social-links--footer a:hover,
-.wp-block-social-links--footer a:active,
-.wp-block-social-links--footer a:focus {
-    color: var(--wp--custom--color--neutral--white);
+.social-links li svg {
+    height: 4em;
+    width: 4em;
 }
 
+.site-footer .wp-block-social-links {
+    justify-content: center;
+}
