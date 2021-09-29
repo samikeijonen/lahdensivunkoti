@@ -47,12 +47,14 @@
 
 .is-style-white-bg .wp-block-button__link {
     background-color: var(--wp--custom--color--neutral--white);
+    border-color: var(--wp--custom--color--neutral--white);
     color: var(--wp--custom--color--primary--500);
 
     &:hover,
     &:active,
     &:focus {
         background-color: var(--wp--custom--color--neutral--white);
+        border-color: var(--wp--custom--color--neutral--white);
         color: var(--wp--custom--color--grey--900);
     }
 
@@ -62,9 +64,13 @@
 }
 
 // Core group block.
-.wp-block-group {
-    @include default-top-margin();
-    @include default-bottom-margin();
+.wp-block-group.has-background {
+    @include default-top-padding();
+    @include default-bottom-padding();
+}
+
+.hero + .wp-block-group.has-background {
+    margin-top: 0;
 }
 
 // Core columns block.
@@ -309,8 +315,8 @@ ul.wp-block-social-links {
     }
 
     svg {
-        height: 1.5em;
-        width: 1.5em;
+        height: 2em;
+        width: 2em;
     }
 }
 

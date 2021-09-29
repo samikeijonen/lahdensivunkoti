@@ -1,8 +1,8 @@
 .site-footer {
     @include default-top-padding();
     @include default-bottom-padding();
-    background-color: var(--wp--custom--color--primary--500);
-    color: var(--wp--custom--color--neutral--white);
+
+    background-color: var(--wp--custom--color--grey--200);
 }
 
 .site-footer__text {
@@ -12,8 +12,4 @@
 
 .site-footer__copyright {
     @include font-size(16);
-}
-
-.site-footer a:focus {
-    outline-color: var(--wp--custom--color--neutral--white);
 }

@@ -7,7 +7,7 @@ $class_name = attr( 'className', $attributes, '' );
 
 $class_names = [
     'latest-posts',
-    'alignfull',
+    'alignwide',
 ];
 
 if ( $class_name ) {

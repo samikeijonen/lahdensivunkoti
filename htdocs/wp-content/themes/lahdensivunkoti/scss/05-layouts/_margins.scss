@@ -37,6 +37,11 @@ figure {
     :last-child {
         @include default-bottom-margin();
     }
+
+    :last-child.has-background,
+    :last-child.image-and-text {
+        margin-bottom: 0;
+    }
 }
 
 .content-area > h2,
@@ -45,22 +50,17 @@ figure {
 }
 
 // Helper class for unifying space aroud modules
-.content-row {
+.content-row,
+.wp-block-group,
+// Next element top margin inside the content area.
+.content-area .content-row + *,
+.content-area .wp-block-group + * {
     @include default-top-margin();
-    @include default-bottom-margin();
-    // Make sure that elements with backgrounds have space around the content.
-    // .has-background is also used in WP Core blocks.
-    &.has-background {
-        @include default-top-padding();
-        @include default-bottom-padding();
-        + .has-background {
-            @include default-top-margin();
-        }
-        &:first-child {
-            margin-top: 0;
-        }
-        &:last-child {
-            margin-bottom: 0;
-        }
-    }
+}
+
+// Set all alignfull elements margin-top to zero, if they are first block.
+.content-area > .alignfull:first-child,
+.content-area .has-background + .has-background,
+.content-area .has-background + .image-and-text {
+    margin-top: 0;
 }

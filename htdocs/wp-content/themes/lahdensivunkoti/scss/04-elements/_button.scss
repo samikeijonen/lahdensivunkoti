@@ -2,22 +2,25 @@
 .wp-block-button__link,
 .wp-block-button__link:visited {
     @include font-size(20);
-    background-color: var(--wp--custom--color--primary--500);
-    border: 2px solid var(--wp--custom--color--primary--500);
+    background-color: var(--wp--custom--color--grey--700);
+    border: 2px solid var(--wp--custom--color--grey--700);
     border-radius: 0;
     color: var(--wp--custom--color--neutral--white);
     cursor: pointer;
     display: inline-block;
     font-weight: 700;
+    letter-spacing: 0.05em;
     line-height: 1;
     padding: var(--wp--custom--spacing--2) var(--wp--custom--spacing--4);
     text-decoration: none;
+    text-transform: uppercase;
     transition: background-color var(--wp--custom--transition--3);
 
     &:hover,
     &:active,
     &:focus {
         background-color: var(--wp--custom--color--grey--900);
+        border-color: var(--wp--custom--color--grey--900);
         color: var(--wp--custom--color--neutral--white);
 
         svg {

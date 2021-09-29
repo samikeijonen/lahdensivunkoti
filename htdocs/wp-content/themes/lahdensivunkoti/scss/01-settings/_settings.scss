@@ -13,12 +13,12 @@ $text-styles: (
         )
     ),
     h1: (
-        font-size: 68,
+        font-size: 80,
         line-height: 1.14,
         font-weight: 700,
         media-queries: (
             medium-large: (
-                font-size: 42,
+                font-size: 48,
                 line-height: 1.2,
             ),
             small: (
@@ -82,7 +82,7 @@ $text-styles: (
 );
 
 $breakpoints: (
-    navigation: 70em,
+    navigation: 75em,
     medium-large: 55em,
     medium: 48em,
     small: 26em

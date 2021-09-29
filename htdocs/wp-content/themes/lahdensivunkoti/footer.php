@@ -10,7 +10,7 @@
 		</main><!-- .site-content -->
 
 		<footer class="site-footer x-padding">
-			<div class="site-footer__container container grid has-2-columns alignfull">
+			<div class="site-footer__container container grid has-2-columns alignwide">
 				<div class="site-footer__text top-margin">
 					<?php
 						// Echo from reusable blocks `/wp-admin/edit.php?post_type=wp_block`.

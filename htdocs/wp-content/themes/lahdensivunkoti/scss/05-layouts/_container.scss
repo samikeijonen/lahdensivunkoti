@@ -17,7 +17,8 @@ body {
 }
 
 // Side padding.
-.x-padding {
+.x-padding,
+.has-background.alignfull {
     padding-left: var(--side-padding);
     padding-right: var(--side-padding);
 }
@@ -26,11 +27,8 @@ body {
     max-width: var(--wp--custom--width--container-wide);
 }
 
+.alignmax,
 .alignfull {
-    max-width: var(--wp--custom--width--container);
-}
-
-.alignmax {
     margin-left: calc(var(--side-padding) * -1);
     margin-right: calc(var(--side-padding) * -1);
     max-width: none;
