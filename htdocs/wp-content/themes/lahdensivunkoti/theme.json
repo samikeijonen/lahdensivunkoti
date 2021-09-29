@@ -3,10 +3,9 @@
     "settings": {
         "custom": {
             "color": {
-                "primary": {
-                    "100": "#e3f0e3",
-                    "300": "#73ac28",
-                    "500": "#0a260a"
+                "theme": {
+                    "green": "#e3f0e3",
+                    "beige": "#f9edda"
                 },
                 "secondary": {
                     "100": "#1aa2dd",
@@ -15,10 +14,6 @@
                 },
                 "grey": {
                     "100": "rgba(87, 87, 86, 0.1)",
-                    "200": "#f9edda",
-                    "300": "#ddd",
-                    "400": "#f3efeb",
-                    "600": "#8b7655",
                     "700": "#575756",
                     "900": "#222"
                 },
@@ -95,12 +90,12 @@
                     "palette": [
                         {
                             "slug": "beige",
-                            "color": "var(--wp--custom--color--grey--200)",
+                            "color": "var(--wp--custom--color--theme--beige)",
                             "name": "Beige"
                         },
                         {
                             "slug": "green-light",
-                            "color": "var(--wp--custom--color--primary--100)",
+                            "color": "var(--wp--custom--color--theme--green)",
                             "name": "Green light"
                         }
                     ]
