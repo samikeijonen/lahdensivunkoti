@@ -19,7 +19,6 @@ const BLOCK_SLUG = 'latest-posts';
 export default registerBlockType(name, {
     edit: (props) => {
         const { attributes, className } = props;
-		console.log('Attrs', attributes)
 
         const classes = classNames({
             [`${BLOCK_SLUG}`]: true,

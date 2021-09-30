@@ -13,7 +13,6 @@ const { SelectControl, Spinner } = wp.components;
 const TermSelector = (props) => {
     const { attributes, setAttributes } = props;
     const options = [];
-	console.log(attributes, props);
 
     options.push({
         value: 0,
