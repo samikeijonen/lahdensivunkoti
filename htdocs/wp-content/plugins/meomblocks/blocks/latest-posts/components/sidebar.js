@@ -2,6 +2,11 @@ const { __ } = wp.i18n;
 const { PanelBody, RadioControl } = wp.components;
 const { InspectorControls } = wp.blockEditor;
 
+/**
+ * Internal dependencies
+ */
+import TermSelector from './../../../components/term-selector';
+
 const Sidebar = (props) => {
     const {
         attributes: { count },
@@ -26,6 +31,10 @@ const Sidebar = (props) => {
                     ]}
                     onChange={(newCount) => setAttributes({ count: newCount })}
                 />
+
+				<TermSelector taxonomy="category" termIdWanted="termId1" {...props} />
+				<TermSelector taxonomy="category" termIdWanted="termId2" {...props} />
+				<TermSelector taxonomy="category" termIdWanted="termId3" {...props} />
             </PanelBody>
         </InspectorControls>
     );

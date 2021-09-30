@@ -9,6 +9,15 @@
         "count": {
             "type": "string",
             "default": "3"
+        },
+        "termId1": {
+            "type": "string"
+        },
+        "termId2": {
+            "type": "string"
+        },
+        "termId3": {
+            "type": "string"
         }
     }
 }
