@@ -1,11 +1,14 @@
 .post-item {
-    background-color: var(--wp--custom--color--neutral--white);
+    background-color: var(--wp--custom--color--theme--green);
     position: relative;
     transition: background-color var(--wp--custom--transition--4), border var(--wp--custom--transition--4);
 
-    &:focus-within,
-    &:hover {
-        background-color: var(--wp--custom--color--theme--green);
+    &:nth-child(3n-1) {
+        background-color: var(--wp--custom--color--theme--beige);
+    }
+
+    &:nth-child(3n) {
+        background-color: var(--wp--custom--color--grey--100);
     }
 
     a {
@@ -23,9 +26,10 @@
 }
 
 .post-item__content {
-    padding: var(--wp--custom--spacing--4) var(--wp--custom--spacing--3);
+    padding: var(--wp--custom--spacing--4) var(--wp--custom--spacing--2);
+    text-align: center;
 
     @include media-min(navigation) {
-        padding: var(--wp--custom--spacing--6) var(--wp--custom--spacing--4-5);
+        padding: var(--wp--custom--spacing--6) var(--wp--custom--spacing--3);
     }
 }

@@ -6,18 +6,17 @@
     "icon": "list-view",
     "keywords": ["latest", "posts", "meom"],
     "attributes": {
-        "count": {
-            "type": "string",
-            "default": "3"
-        },
         "termId1": {
-            "type": "string"
+            "type": "string",
+			"default": "1"
         },
         "termId2": {
-            "type": "string"
+            "type": "string",
+			"default": "1"
         },
         "termId3": {
-            "type": "string"
+            "type": "string",
+			"default": "1"
         }
     }
 }

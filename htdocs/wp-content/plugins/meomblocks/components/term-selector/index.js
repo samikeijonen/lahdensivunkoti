@@ -11,9 +11,9 @@ const { SelectControl, Spinner } = wp.components;
  * @param {Object} props Props for component.
  */
 const TermSelector = (props) => {
-    const { attributes, setAttributes, termIdWanted } = props;
+    const { attributes, setAttributes } = props;
     const options = [];
-	console.log(attributes, props, props.termIdWanted);
+	console.log(attributes, props);
 
     options.push({
         value: 0,
@@ -34,14 +34,34 @@ const TermSelector = (props) => {
             {props.isRequesting && <Spinner />}
 
             {!props.isRequesting && (
-                <SelectControl
-                    label={__('Select a category', 'meom-blocks')}
-                    options={options}
-                    onChange={(newTermId) => {
-                        setAttributes({ termIdWanted: newTermId });
-                    }}
-                    value={attributes.termIdWanted}
-                />
+				<>
+					<SelectControl
+						label={__('Select category 1', 'meom-blocks')}
+						options={options}
+						onChange={(newTermId) => {
+							setAttributes({ termId1: newTermId });
+						}}
+						value={attributes.termId1}
+					/>
+
+					<SelectControl
+						label={__('Select category 2', 'meom-blocks')}
+						options={options}
+						onChange={(newTermId) => {
+							setAttributes({ termId2: newTermId });
+						}}
+						value={attributes.termId2}
+					/>
+
+					<SelectControl
+						label={__('Select category 3', 'meom-blocks')}
+						options={options}
+						onChange={(newTermId) => {
+							setAttributes({ termId3: newTermId });
+						}}
+						value={attributes.termId3}
+					/>
+				</>
             )}
         </>
     );

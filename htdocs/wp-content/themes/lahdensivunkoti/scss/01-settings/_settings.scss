@@ -14,12 +14,11 @@ $text-styles: (
     ),
     h1: (
         font-size: 80,
-        line-height: 1.14,
+        line-height: 1.1,
         font-weight: 700,
         media-queries: (
             medium-large: (
                 font-size: 48,
-                line-height: 1.2,
             ),
             small: (
                 font-size: 32,
@@ -50,18 +49,17 @@ $text-styles: (
         )
     ),
     h3: (
-        font-size: 32,
-        line-height: 1.33,
+        font-size: 30,
+        line-height: 1.2,
         font-weight: 700,
         media-queries: (
             medium: (
                 font-size: 24,
-                line-height: 1.4,
             ),
         )
     ),
     h4: (
-        font-size: 21,
+        font-size: 22,
         line-height: 1.3,
         font-weight: 700,
         media-queries: (
@@ -71,22 +69,22 @@ $text-styles: (
         )
     ),
     h5: (
+        font-size: 20,
+        line-height: 1.3,
+        font-weight: 700,
+        media-queries: (
+            medium: (
+                font-size: 18,
+            ),
+        )
+    ),
+    h6: (
         font-size: 18,
         line-height: 1.3,
         font-weight: 700,
         media-queries: (
             medium: (
                 font-size: 17,
-            ),
-        )
-    ),
-    h6: (
-        font-size: 17,
-        line-height: 1.3,
-        font-weight: 700,
-        media-queries: (
-            medium: (
-                font-size: 16,
             ),
         )
     ),

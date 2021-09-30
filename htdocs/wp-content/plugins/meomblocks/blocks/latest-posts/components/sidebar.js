@@ -16,25 +16,7 @@ const Sidebar = (props) => {
     return (
         <InspectorControls>
             <PanelBody title={__('Settings', 'meom-blocks')} initialOpen={true}>
-                <RadioControl
-                    label={__('How many posts to show', 'meom-blocks')}
-                    selected={count}
-                    options={[
-                        {
-                            label: __('Three', 'meom-blocks'),
-                            value: '3',
-                        },
-                        {
-                            label: __('Six', 'meom-blocks'),
-                            value: '6',
-                        },
-                    ]}
-                    onChange={(newCount) => setAttributes({ count: newCount })}
-                />
-
-				<TermSelector taxonomy="category" termIdWanted="termId1" {...props} />
-				<TermSelector taxonomy="category" termIdWanted="termId2" {...props} />
-				<TermSelector taxonomy="category" termIdWanted="termId3" {...props} />
+				<TermSelector taxonomy="category" {...props} />
             </PanelBody>
         </InspectorControls>
     );

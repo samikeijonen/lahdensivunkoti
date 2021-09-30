@@ -12,6 +12,5 @@ $entry_categories = get_the_category_list( ', ' );
 
 <p class="entry-meta">
 	<span class="entry-meta__category"><?php echo wp_kses_post( $entry_categories ); ?></span> -
-	<span class="entry-meta__date"><?php Kala\date_with_time_tag(); ?></span> -
-	<span class="entry-meta__author"><?php the_author_posts_link(); ?></span>
+	<span class="entry-meta__date"><?php Kala\date_with_time_tag(); ?></span>
 </p>
