@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c4f6593ee71d4d41daa9c36c971d6b46",
+    "content-hash": "bba819b0386a6a3e1420e1ebe42c0854",
     "packages": [
         {
             "name": "composer/installers",
@@ -458,10 +458,10 @@
         },
         {
             "name": "koodimonni-plugin-language/akismet-fi",
-            "version": "4.1.12",
+            "version": "4.2.1",
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/translation/plugin/akismet/4.1.12/fi.zip"
+                "url": "https://downloads.wordpress.org/translation/plugin/akismet/4.2.1/fi.zip"
             },
             "require": {
                 "koodimonni/composer-dropin-installer": ">=0.2.3"
@@ -477,10 +477,10 @@
         },
         {
             "name": "koodimonni-plugin-language/akismet-sv_se",
-            "version": "4.1.12",
+            "version": "4.2.1",
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/translation/plugin/akismet/4.1.12/sv_SE.zip"
+                "url": "https://downloads.wordpress.org/translation/plugin/akismet/4.2.1/sv_SE.zip"
             },
             "require": {
                 "koodimonni/composer-dropin-installer": ">=0.2.3"
@@ -1599,44 +1599,81 @@
         },
         {
             "name": "seravo/seravo-plugin",
-            "version": "1.9.30",
+            "version": "1.9.31",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seravo/seravo-plugin.git",
-                "reference": "7289838cc1e2785d0326a7c4058fb0f93b8ec2a1"
+                "reference": "b70d3dddec7a8c116d03cf9393175ebed41adee5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seravo/seravo-plugin/zipball/7289838cc1e2785d0326a7c4058fb0f93b8ec2a1",
-                "reference": "7289838cc1e2785d0326a7c4058fb0f93b8ec2a1",
+                "url": "https://api.github.com/repos/Seravo/seravo-plugin/zipball/b70d3dddec7a8c116d03cf9393175ebed41adee5",
+                "reference": "b70d3dddec7a8c116d03cf9393175ebed41adee5",
                 "shasum": ""
             },
             "require": {
                 "composer/installers": "^1.0",
-                "enshrined/svg-sanitize": ">=0.13.3"
+                "enshrined/svg-sanitize": ">=0.13.3",
+                "php": "^5.6 || ^7.0 || ^8.0",
+                "symfony/polyfill-php73": "^1.23"
+            },
+            "require-dev": {
+                "pheromone/phpcs-security-audit": "^2.0",
+                "php-stubs/wordpress-stubs": "4.7.14",
+                "php-stubs/wp-cli-stubs": "2.4.0",
+                "phpcompatibility/php-compatibility": "^9.3",
+                "phpstan/phpstan-strict-rules": "^0.12.10",
+                "rector/rector": "^0.11.16",
+                "squizlabs/php_codesniffer": "3.6",
+                "szepeviktor/phpstan-wordpress": "^0.7.5",
+                "wp-coding-standards/wpcs": "^2.3"
             },
             "type": "wordpress-muplugin",
+            "autoload": {
+                "classmap": [
+                    "src/lib/module",
+                    "src/lib/postbox",
+                    "src/lib/ajax",
+                    "src/lib/api.php",
+                    "src/lib/helpers.php",
+                    "src/lib/cruftremover.php",
+                    "src/lib/list-table.php",
+                    "src/lib/shell.php",
+                    "src/lib/security-restrictions.php",
+                    "src/lib/logs.php",
+                    "src/lib/compatibility.php",
+                    "src/lib/shadow.php",
+                    "src/modules/pages",
+                    "src/modules/check-site-health.php",
+                    "src/modules/dashboard-widgets.php",
+                    "src/modules/fixes.php",
+                    "src/modules/hide-users.php",
+                    "src/modules/instance-switcher.php",
+                    "src/modules/noindex-domain-alias.php",
+                    "src/modules/passwords.php",
+                    "src/modules/purge-cache.php",
+                    "src/modules/seravotest-auth-bypass.php",
+                    "src/modules/speed-test.php",
+                    "src/modules/thirdparty-fixes.php",
+                    "src/modules/wp-login-log.php",
+                    "src/modules/wp-plugin-log.php",
+                    "src/modules/wp-user-log.php",
+                    "src/modules/admin-checks.php",
+                    "src/modules/image-upload.php"
+                ]
+            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0-or-later"
             ],
             "authors": [
                 {
-                    "name": "Otto Kekäläinen",
-                    "email": "otto@seravo.com",
-                    "homepage": "https://github.com/ottok"
-                },
-                {
-                    "name": "Leo Toikka",
-                    "email": "leo@seravo.com"
-                },
-                {
-                    "name": "Simo Kemppainen",
-                    "email": "simo@seravo.com"
+                    "name": "Seravo",
+                    "email": "developers@seravo.com"
                 }
             ],
             "description": "Enhances WordPress with Seravo.com specific features and integrations",
-            "homepage": "http://seravo.com",
+            "homepage": "https://seravo.com",
             "keywords": [
                 "seravo",
                 "seravo.com",
@@ -1646,9 +1683,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Seravo/seravo-plugin/issues",
-                "source": "https://github.com/Seravo/seravo-plugin/tree/1.9.30"
+                "source": "https://github.com/Seravo/seravo-plugin/tree/1.9.31"
             },
-            "time": "2021-06-09T11:40:05+00:00"
+            "time": "2021-09-27T10:14:59+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -1810,6 +1847,85 @@
             "time": "2021-05-27T12:26:48+00:00"
         },
         {
+            "name": "symfony/polyfill-php73",
+            "version": "v1.23.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-php73.git",
+                "reference": "fba8933c384d6476ab14fb7b8526e5287ca7e010"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-php73/zipball/fba8933c384d6476ab14fb7b8526e5287ca7e010",
+                "reference": "fba8933c384d6476ab14fb7b8526e5287ca7e010",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "1.23-dev"
+                },
+                "thanks": {
+                    "name": "symfony/polyfill",
+                    "url": "https://github.com/symfony/polyfill"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php73\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ],
+                "classmap": [
+                    "Resources/stubs"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill backporting some PHP 7.3+ features to lower PHP versions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-php73/tree/v1.23.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-02-19T12:13:01+00:00"
+        },
+        {
             "name": "symfony/polyfill-php80",
             "version": "v1.23.1",
             "source": {
@@ -1894,31 +2010,31 @@
         },
         {
             "name": "vlucas/phpdotenv",
-            "version": "v5.3.0",
+            "version": "v5.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "b3eac5c7ac896e52deab4a99068e3f4ab12d9e56"
+                "reference": "accaddf133651d4b5cf81a119f25296736ffc850"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/b3eac5c7ac896e52deab4a99068e3f4ab12d9e56",
-                "reference": "b3eac5c7ac896e52deab4a99068e3f4ab12d9e56",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/accaddf133651d4b5cf81a119f25296736ffc850",
+                "reference": "accaddf133651d4b5cf81a119f25296736ffc850",
                 "shasum": ""
             },
             "require": {
                 "ext-pcre": "*",
-                "graham-campbell/result-type": "^1.0.1",
+                "graham-campbell/result-type": "^1.0.2",
                 "php": "^7.1.3 || ^8.0",
-                "phpoption/phpoption": "^1.7.4",
-                "symfony/polyfill-ctype": "^1.17",
-                "symfony/polyfill-mbstring": "^1.17",
-                "symfony/polyfill-php80": "^1.17"
+                "phpoption/phpoption": "^1.8",
+                "symfony/polyfill-ctype": "^1.23",
+                "symfony/polyfill-mbstring": "^1.23.1",
+                "symfony/polyfill-php80": "^1.23.1"
             },
             "require-dev": {
                 "bamarni/composer-bin-plugin": "^1.4.1",
                 "ext-filter": "*",
-                "phpunit/phpunit": "^7.5.20 || ^8.5.14 || ^9.5.1"
+                "phpunit/phpunit": "^7.5.20 || ^8.5.21 || ^9.5.10"
             },
             "suggest": {
                 "ext-filter": "Required to use the boolean validator."
@@ -1941,13 +2057,11 @@
             "authors": [
                 {
                     "name": "Graham Campbell",
-                    "email": "graham@alt-three.com",
-                    "homepage": "https://gjcampbell.co.uk/"
+                    "email": "hello@gjcampbell.co.uk"
                 },
                 {
                     "name": "Vance Lucas",
-                    "email": "vance@vancelucas.com",
-                    "homepage": "https://vancelucas.com/"
+                    "email": "vance@vancelucas.com"
                 }
             ],
             "description": "Loads environment variables from `.env` to `getenv()`, `$_ENV` and `$_SERVER` automagically.",
@@ -1958,7 +2072,7 @@
             ],
             "support": {
                 "issues": "https://github.com/vlucas/phpdotenv/issues",
-                "source": "https://github.com/vlucas/phpdotenv/tree/v5.3.0"
+                "source": "https://github.com/vlucas/phpdotenv/tree/v5.3.1"
             },
             "funding": [
                 {
@@ -1970,7 +2084,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-20T15:23:13+00:00"
+            "time": "2021-10-02T19:24:42+00:00"
         },
         {
             "name": "wpackagist-plugin/imagify",
@@ -1992,15 +2106,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "17.2",
+            "version": "17.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/17.2"
+                "reference": "tags/17.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.17.2.zip"
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.17.3.zip"
             },
             "require": {
                 "composer/installers": "~1.0 || ~2.0"
@@ -2079,6 +2193,43 @@
                 "source": "https://github.com/dealerdirect/phpcodesniffer-composer-installer"
             },
             "time": "2020-12-07T18:04:37+00:00"
+        },
+        {
+            "name": "meom/phpcs-composer",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MEOM/phpcs-composer.git",
+                "reference": "3c871ac52e2cdbf59ee1be0f9ad532c2de61cac1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MEOM/phpcs-composer/zipball/3c871ac52e2cdbf59ee1be0f9ad532c2de61cac1",
+                "reference": "3c871ac52e2cdbf59ee1be0f9ad532c2de61cac1",
+                "shasum": ""
+            },
+            "require": {
+                "dealerdirect/phpcodesniffer-composer-installer": "*",
+                "phpcompatibility/phpcompatibility-wp": "^2",
+                "wp-coding-standards/wpcs": "*"
+            },
+            "default-branch": true,
+            "type": "phpcodesniffer-standard",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "MEOM",
+                    "email": "tech@meom.fi"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/MEOM/phpcs-composer/issues",
+                "source": "https://github.com/MEOM/phpcs-composer/tree/main"
+            },
+            "time": "2021-02-19T21:34:02+00:00"
         },
         {
             "name": "phpcompatibility/php-compatibility",
@@ -2253,53 +2404,6 @@
             "time": "2021-07-21T11:09:57+00:00"
         },
         {
-            "name": "samikeijonen/phpcs-composer",
-            "version": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/samikeijonen/phpcs-composer.git",
-                "reference": "140e25e37052e93e82e0fe2b46831868d2a7e196"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/samikeijonen/phpcs-composer/zipball/140e25e37052e93e82e0fe2b46831868d2a7e196",
-                "reference": "140e25e37052e93e82e0fe2b46831868d2a7e196",
-                "shasum": ""
-            },
-            "require": {
-                "dealerdirect/phpcodesniffer-composer-installer": "*",
-                "php": ">=5.6",
-                "phpcompatibility/phpcompatibility-wp": "^2",
-                "wp-coding-standards/wpcs": "*"
-            },
-            "default-branch": true,
-            "type": "phpcodesniffer-standard",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Sami Keijonen",
-                    "email": "sami.keijonen@foxnet.fi",
-                    "homepage": "https://foxland.fi",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Custom PHPCS ruleset.",
-            "homepage": "https://github.com/samikeijonen/phpcs-composer",
-            "keywords": [
-                "phpcs",
-                "standards",
-                "wordpress"
-            ],
-            "support": {
-                "issues": "https://github.com/samikeijonen/phpcs-composer/issues",
-                "source": "https://github.com/samikeijonen/phpcs-composer/tree/main"
-            },
-            "time": "2021-09-14T06:39:28+00:00"
-        },
-        {
             "name": "squizlabs/php_codesniffer",
             "version": "3.6.0",
             "source": {
@@ -2410,7 +2514,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "samikeijonen/phpcs-composer": 20
+        "meom/phpcs-composer": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

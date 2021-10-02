@@ -11,7 +11,7 @@ $content        = remove_empty_tags_recursive( $content );
 $class_names = [
     'image-and-text',
     'image-and-text--position-' . $image_position,
-	'has-' . $bg_color . '-background',
+    'has-' . $bg_color . '-background',
     'alignfull',
     'content-row',
 ];

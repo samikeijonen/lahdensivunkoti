@@ -13,16 +13,16 @@ const BLOCK_SLUG = 'social-links';
 export default registerBlockType(name, {
     edit: (props) => {
         const {
-			attributes: { text },
-			className,
-			setAttributes
-		} = props;
+            attributes: { text },
+            className,
+            setAttributes,
+        } = props;
 
-		const textClass = `${BLOCK_SLUG}__text`;
+        const textClass = `${BLOCK_SLUG}__text`;
 
         const classes = classNames({
             [`${BLOCK_SLUG}`]: true,
-            ['alignfull']: true,
+            ['alignfull']: true, // eslint-disable-line
             [`${className}`]: className ? true : false,
         });
 
@@ -32,16 +32,16 @@ export default registerBlockType(name, {
 
         return (
             <div {...blockProps}>
-				<div class="social-links__wrapper alignwide mx-auto">
-					<RichText
-						tagName="h2"
-						allowedFormats={[]}
-						className={textClass}
-						placeholder={__('Example text', 'meom-blocks')}
-						onChange={(newText) => setAttributes({ text: newText })}
-						value={text}
-					/>
-            	</div>
+                <div className="social-links__wrapper alignwide mx-auto">
+                    <RichText
+                        tagName="h2"
+                        allowedFormats={[]}
+                        className={textClass}
+                        placeholder={__('Example text', 'meom-blocks')}
+                        onChange={(newText) => setAttributes({ text: newText })}
+                        value={text}
+                    />
+                </div>
             </div>
         );
     },

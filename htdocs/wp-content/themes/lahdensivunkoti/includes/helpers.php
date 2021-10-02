@@ -14,7 +14,7 @@ namespace Kala;
  * @return void
  */
 function the_slug( $id = null ) {
-	echo esc_html( get_slug( $id ) );
+    echo esc_html( get_slug( $id ) );
 }
 
 /**
@@ -24,10 +24,10 @@ function the_slug( $id = null ) {
  * @return string
  */
 function get_slug( $id = null ) {
-	global $post;
-	$id        = $id || $post->ID;
-	$post_data = get_post( $id, ARRAY_A );
-	return $post_data['post_name'];
+    global $post;
+    $id        = $id || $post->ID;
+    $post_data = get_post( $id, ARRAY_A );
+    return $post_data['post_name'];
 }
 
 /**
@@ -43,7 +43,7 @@ function render_partial( $template, $args ) {
     // phpcs:disable
     extract( $args );
     // phpcs:enable
-	include locate_template( $template . '.php' );
+    include locate_template( $template . '.php' );
 }
 
 /**
@@ -54,11 +54,11 @@ function render_partial( $template, $args ) {
  * @return array
  */
 function delete_element_by_value( $value, &$array ) {
-	$index = array_search( $value, $array, true );
-	if ( $index !== false ) {
-		unset( $array[ $index ] );
-	}
-	return $array;
+    $index = array_search( $value, $array, true );
+    if ( $index !== false ) {
+        unset( $array[ $index ] );
+    }
+    return $array;
 }
 
 /**
@@ -69,10 +69,10 @@ function delete_element_by_value( $value, &$array ) {
  * @return mixed
  */
 function get_variable( &$variable, $fallback = false ) {
-	if ( isset( $variable ) ) {
-		return $variable;
-	}
-	return $fallback;
+    if ( isset( $variable ) ) {
+        return $variable;
+    }
+    return $fallback;
 }
 
 /**
@@ -82,14 +82,14 @@ function get_variable( &$variable, $fallback = false ) {
  * @return boolean
  */
 function meomblocks_block_exists( $block_slug ) {
-	$meom_native_blocks = function_exists( 'MEOM\Blocks\meomblocks_native_blocks' ) ? \MEOM\Blocks\meomblocks_native_blocks() : false;
-	if ( $meom_native_blocks ) {
-		$block_index = array_search( $block_slug, array_column( $meom_native_blocks, 'slug' ), true );
-		if ( $block_index !== false ) {
-			return true;
-		}
-	}
-	return false;
+    $meom_native_blocks = function_exists( 'MEOM\Blocks\meomblocks_native_blocks' ) ? \MEOM\Blocks\meomblocks_native_blocks() : false;
+    if ( $meom_native_blocks ) {
+        $block_index = array_search( $block_slug, array_column( $meom_native_blocks, 'slug' ), true );
+        if ( $block_index !== false ) {
+            return true;
+        }
+    }
+    return false;
 }
 
 /**
@@ -102,7 +102,7 @@ function meomblocks_block_exists( $block_slug ) {
  * @return void
  */
 function date_with_time_tag( $format = '', $post_id = null ) {
-	echo get_date_with_time_tag( $format, $post_id ); // phpcs:ignore WordPress.Security.EscapeOutput
+    echo get_date_with_time_tag( $format, $post_id ); // phpcs:ignore WordPress.Security.EscapeOutput
 }
 
 /**
@@ -114,13 +114,13 @@ function date_with_time_tag( $format = '', $post_id = null ) {
  * @return string
  */
 function get_date_with_time_tag( $format = '', $post_id = null ) {
-	$time_string = '<time class="entry-date" datetime="%1$s">%2$s</time>';
-	$time_string = sprintf(
-		$time_string,
-		esc_attr( get_the_date( DATE_W3C, $post_id ) ),
-		esc_html( get_the_date( $format, $post_id ) )
-	);
-	return $time_string;
+    $time_string = '<time class="entry-date" datetime="%1$s">%2$s</time>';
+    $time_string = sprintf(
+        $time_string,
+        esc_attr( get_the_date( DATE_W3C, $post_id ) ),
+        esc_html( get_the_date( $format, $post_id ) )
+    );
+    return $time_string;
 }
 
 /**
@@ -143,9 +143,9 @@ function display_svg( $icon = '', $path = '/images/icons/' ) {
  * @return string SVG markup.
  */
 function get_svg( $icon = '', $path = '/images/icons/' ) {
-	// Get SVG file path.
-	$svg_file = get_theme_file_path( esc_attr( $path ) . esc_attr( $icon ) . '.svg' );
+    // Get SVG file path.
+    $svg_file = get_theme_file_path( esc_attr( $path ) . esc_attr( $icon ) . '.svg' );
 
-	// Return markup or empty if icon does not exist.
-	return file_exists( $svg_file ) ? file_get_contents( $svg_file ) : '';
+    // Return markup or empty if icon does not exist.
+    return file_exists( $svg_file ) ? file_get_contents( $svg_file ) : '';
 }

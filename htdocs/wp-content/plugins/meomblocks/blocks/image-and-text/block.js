@@ -35,7 +35,7 @@ export default registerBlockType(block.name, {
         const classes = classNames({
             'image-and-text': true,
             [`image-and-text--position-${imagePosition}`]: true,
-			[`has-${backgroundColor}-background`]: true,
+            [`has-${backgroundColor}-background`]: true,
             alignfull: true,
             'content-row': true,
             [`${className}`]: className ? true : false,

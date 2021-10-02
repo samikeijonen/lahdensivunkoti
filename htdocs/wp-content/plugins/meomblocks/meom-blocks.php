@@ -8,7 +8,7 @@
 
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) {
-	exit;
+    exit;
 }
 
 require_once plugin_dir_path( __FILE__ ) . 'inc/helpers.php';
@@ -16,10 +16,10 @@ require_once plugin_dir_path( __FILE__ ) . 'inc/init.php';
 
 // Setup MEOM Block Generator.
 add_filter(
-	'meom_blocks_generator_path_to_config',
-	function() {
-		return __DIR__;
-	}
+    'meom_blocks_generator_path_to_config',
+    function() {
+        return __DIR__;
+    }
 );
 
 /**

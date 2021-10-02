@@ -68,6 +68,6 @@
     "wordpress-install-dir": "htdocs/wordpress"
   },
   "require-dev": {
-    "samikeijonen/phpcs-composer": "dev-main"
+    "meom/phpcs-composer": "dev-main"
   }
 }
