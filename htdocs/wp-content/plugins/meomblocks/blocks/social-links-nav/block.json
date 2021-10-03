@@ -1,8 +1,9 @@
 {
     "apiVersion": 2,
-    "name": "meomblocks/social-links",
+    "name": "meomblocks/social-links-nav",
     "title": "Social links",
     "category": "meomblocks",
+    "parent": ["meomblocks/social-links"],
     "icon": "share",
     "keywords": ["social", "posts", "lahdensivun"]
 }

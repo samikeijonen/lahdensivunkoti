@@ -15,6 +15,9 @@
         },
         {
             "slug": "social-links"
+        },
+        {
+            "slug": "social-links-nav"
         }
     ],
     "acf_blocks": {}
