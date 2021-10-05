@@ -15,11 +15,11 @@ select,
 textarea {
     @include text-style(body);
     font-family: var(--wp--custom--font--sans);
-    color: var(--wp--custom--color--grey--900);
+    color: var(--wp--custom--color--grey--700);
 }
 
 body {
-    background-color: var(--wp--custom--color--grey--200);
+    background-color: var(--wp--custom--color--grey--100);
 }
 
 a {

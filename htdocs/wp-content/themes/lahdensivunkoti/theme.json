@@ -4,7 +4,7 @@
         "custom": {
             "color": {
                 "primary": {
-                    "100": "#effaef",
+                    "100": "#e3f0e3",
                     "300": "#73ac28",
                     "500": "#0a260a"
                 },
@@ -15,11 +15,11 @@
                 },
                 "grey": {
                     "100": "#f8f4f0",
-                    "200": "#efefef",
+                    "200": "#f9edda",
                     "300": "#ddd",
                     "400": "#f3efeb",
                     "600": "#8b7655",
-                    "700": "#555",
+                    "700": "#575756",
                     "900": "#222"
                 },
                 "neutral": {
@@ -46,7 +46,7 @@
             "width": {
                 "site-max": "125rem",
                 "container": "87.5rem",
-                "container-wide": "67rem",
+                "container-wide": "87.5rem",
                 "container-medium": "46rem",
                 "container-small": "27.5rem"
             },
@@ -88,6 +88,24 @@
             "dropCap": false,
             "fontFamilies": [],
             "fontSizes": []
+        },
+		"blocks": {
+            "core/group": {
+                "color": {
+                    "palette": [
+                        {
+                            "slug": "beige",
+                            "color": "var(--wp--custom--color--grey--200)",
+                            "name": "Beige"
+                        },
+                        {
+                            "slug": "green-light",
+                            "color": "var(--wp--custom--color--primary--100)",
+                            "name": "Green light"
+                        }
+                    ]
+                }
+            }
         }
     }
 }

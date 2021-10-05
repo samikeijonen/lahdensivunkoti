@@ -14,7 +14,7 @@ get_template_part( 'partials/header/head' );
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'lahdensivunkoti' ); ?></a>
 
 		<header class="site-header x-padding">
-			<div class="site-header__container container alignfull">
+			<div class="site-header__container container alignwide">
 
 				<div class="site-header__title">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">

@@ -19,13 +19,13 @@ if ( $class_name ) {
 
 if ( $content ) : ?>
     <div class="<?php echo esc_attr( implode( ' ', $class_names ) ); ?>">
-        <div class="image-and-text__container grid has-2-columns">
+        <div class="image-and-text__container grid has-2-columns has-no-gap">
             <?php if ( $image ) : ?>
                 <figure class="image-and-text__image">
                     <?php echo wp_get_attachment_image( $image['id'], 'large' ); // phpcs:ignore ?>
                 </figure>
             <?php endif; ?>
-            <div class="image-and-text__content top-margin">
+            <div class="image-and-text__content top-margin x-padding">
                 <?php echo do_blocks( $content ); // phpcs:ignore ?>
             </div>
         </div>
