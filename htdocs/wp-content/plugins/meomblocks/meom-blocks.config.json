@@ -12,6 +12,9 @@
         },
         {
             "slug": "latest-posts"
+        },
+        {
+            "slug": "social-links"
         }
     ],
     "acf_blocks": {}

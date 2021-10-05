@@ -2,6 +2,7 @@
     @include reset-list();
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .footer-nav__items > .menu-item {
@@ -13,6 +14,7 @@
 }
 
 .footer-nav__items a {
+    font-weight: 700;
     text-decoration: none;
 
     @include media-min(navigation) {

@@ -16,6 +16,7 @@
 
         img {
             @include media-min(medium) {
+                height: 100%;
                 min-height: 30rem;
                 object-fit: cover;
                 width: 100%;

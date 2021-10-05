@@ -28,12 +28,23 @@ $text-styles: (
         )
     ),
     h2: (
-        font-size: 48,
+        font-size: 42,
         line-height: 1.125,
         font-weight: 700,
         media-queries: (
             medium: (
                 font-size: 28,
+                line-height: 1.14,
+            ),
+        )
+    ),
+    h2-bigger: (
+        font-size: 57,
+        line-height: 1.125,
+        font-weight: 700,
+        media-queries: (
+            medium: (
+                font-size: 30,
                 line-height: 1.14,
             ),
         )
@@ -83,7 +94,7 @@ $text-styles: (
 
 $breakpoints: (
     navigation: 75em,
-    medium-large: 55em,
-    medium: 48em,
+    medium-large: 56em,
+    medium: 50em,
     small: 26em
 );
