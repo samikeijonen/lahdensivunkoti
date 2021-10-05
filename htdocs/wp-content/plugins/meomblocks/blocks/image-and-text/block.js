@@ -27,7 +27,7 @@ const TEMPLATE = [
 export default registerBlockType(block.name, {
     edit: (props) => {
         const {
-            attributes: { imagePosition, image },
+            attributes: { imagePosition, backgroundColor, image },
             className,
             setAttributes,
         } = props;
@@ -35,6 +35,7 @@ export default registerBlockType(block.name, {
         const classes = classNames({
             'image-and-text': true,
             [`image-and-text--position-${imagePosition}`]: true,
+			[`has-${backgroundColor}-background`]: true,
             alignfull: true,
             'content-row': true,
             [`${className}`]: className ? true : false,
@@ -74,30 +75,48 @@ export default registerBlockType(block.name, {
 
 const Sidebar = (props) => {
     const {
-        attributes: { imagePosition },
+        attributes: { imagePosition, backgroundColor },
         setAttributes,
     } = props;
     return (
         <InspectorControls>
             <PanelBody
-                title={__('Perusasetukset', 'meom-gutenberg')}
+                title={__('Perusasetukset', 'meomblocks')}
                 initalOpen={true}
             >
                 <RadioControl
-                    label={__('Kuvan sijainti', 'meom-gutenberg')}
+                    label={__('Kuvan sijainti', 'meomblocks')}
                     selected={imagePosition}
                     options={[
                         {
-                            label: __('Vasemmalla', 'meom-gutenberg'),
+                            label: __('Vasemmalla', 'meomblocks'),
                             value: 'left',
                         },
                         {
-                            label: __('Oikealla', 'meom-gutenberg'),
+                            label: __('Oikealla', 'meomblocks'),
                             value: 'right',
                         },
                     ]}
                     onChange={(newImagePosition) => {
                         setAttributes({ imagePosition: newImagePosition });
+                    }}
+                />
+
+                <RadioControl
+                    label={__('Taustan väri', 'meomblocks')}
+                    selected={backgroundColor}
+                    options={[
+                        {
+                            label: __('Vaaleanvihreä', 'meomblocks'),
+                            value: 'green-light',
+                        },
+                        {
+                            label: __('Vaaleanbeige', 'meomblocks'),
+                            value: 'beige-light',
+                        },
+                    ]}
+                    onChange={(newbackgroundColor) => {
+                        setAttributes({ backgroundColor: newbackgroundColor });
                     }}
                 />
             </PanelBody>

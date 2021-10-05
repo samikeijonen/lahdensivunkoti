@@ -8,7 +8,7 @@
     @include reset-list();
 
     @include media(navigation) {
-        background-color: var(--wp--custom--color--grey--200);
+        background-color: var(--wp--custom--color--theme--beige);
         display: none;
         text-align: center;
 
@@ -68,10 +68,9 @@
 .site-nav__toggle {
     @include font-size(20);
     background-color: transparent;
-    border: 2px solid var(--wp--custom--color--primary--500);
+    border: 2px solid var(--wp--custom--color--grey--700);
     border-radius: 0;
     color: var(--wp--custom--color--grey--900);
-    font-weight: 500;
     line-height: 1;
     padding: var(--wp--custom--spacing--2) var(--wp--custom--spacing--3);
     position: relative;

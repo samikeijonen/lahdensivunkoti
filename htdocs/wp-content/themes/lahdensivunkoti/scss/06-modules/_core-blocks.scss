@@ -35,7 +35,7 @@
 
 .is-style-secondary .wp-block-button__link {
     background-color: transparent;
-    color: var(--wp--custom--color--primary--500);
+    color: var(--wp--custom--color--grey--700);
 
     &:hover,
     &:active,
@@ -48,7 +48,7 @@
 .is-style-white-bg .wp-block-button__link {
     background-color: var(--wp--custom--color--neutral--white);
     border-color: var(--wp--custom--color--neutral--white);
-    color: var(--wp--custom--color--primary--500);
+    color: var(--wp--custom--color--grey--700);
 
     &:hover,
     &:active,
@@ -225,20 +225,24 @@ blockquote {
     @include small-bottom-margin();
 
     p {
-        @include font-size(22);
-        font-weight: 500;
+        @include font-size(26);
+        font-style: italic;
+        font-weight: 600;
+        line-height: 1.2;
 
         @include media-min(medium) {
-            @include font-size(26);
+            @include font-size(32);
         }
     }
 
     cite,
     // Editor only have this class, not <cite> markup.
     .wp-block-quote__citation {
+        font-family: var(--wp--custom--font--sans-heading);
         font-style: normal;
         display: block;
-        margin-top: var(--wp--custom--spacing--2);
+        margin-top: var(--wp--custom--spacing--3);
+        text-transform: uppercase;
     }
 }
 

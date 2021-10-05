@@ -3,6 +3,7 @@
 namespace MEOM\Blocks;
 
 $image_position = attr( 'imagePosition', $attributes, 'left' );
+$bg_color       = attr( 'backgroundColor', $attributes, 'green-light' );
 $image          = attr( 'image', $attributes, null );
 $class_name     = attr( 'className', $attributes, '' );
 $content        = remove_empty_tags_recursive( $content );
@@ -10,6 +11,7 @@ $content        = remove_empty_tags_recursive( $content );
 $class_names = [
     'image-and-text',
     'image-and-text--position-' . $image_position,
+	'has-' . $bg_color . '-background',
     'alignfull',
     'content-row',
 ];

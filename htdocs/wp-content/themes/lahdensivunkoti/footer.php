@@ -24,7 +24,7 @@
 
 				<?php get_template_part( 'partials/global/social-links-nav' ); ?>
 
-				<div class="site-footer__logo-nav top-margin">
+				<div class="site-footer__logo-nav">
 					<?php get_template_part( 'partials/global/footer-nav' ); ?>
 				</div>
 			</div>

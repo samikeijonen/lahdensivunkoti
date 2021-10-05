@@ -1,8 +1,12 @@
 @import "../../style-imports/theme-imports";
 
 .image-and-text {
-    background-color: var(--wp--custom--color--primary--100);
+    background-color: var(--wp--custom--color--theme--green);
     text-align: center;
+
+    &.has-beige-light-background {
+        background-color: var(--wp--custom--color--theme--beige);
+    }
 
     &__container {
         @include media-min(medium) {

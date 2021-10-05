@@ -9,11 +9,15 @@
 	"textdomain": "meomblocks",
 	"attributes": {
 		"imagePosition": {
-            "type": "string",
-            "default": "left"
-          },
-          "image": {
-            "type": "object"
-          }
+			"type": "string",
+			"default": "left"
+		},
+		"backgroundColor": {
+			"type": "string",
+			"default": "green-light"
+		},
+		"image": {
+		"type": "object"
+		}
 	}
 }

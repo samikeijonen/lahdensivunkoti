@@ -1,12 +1,12 @@
 .hero {
     @include small-top-padding();
     @include small-bottom-padding();
-    background-color: var(--wp--custom--color--primary--500);
+    background-color: var(--wp--custom--color--grey--700);
     margin-bottom: 0;
     position: relative;
 
     &::before {
-        background-color: var(--wp--custom--color--primary--500);
+        background-color: var(--wp--custom--color--grey--900);
         bottom: 0;
         content: "";
         height: 100%;
