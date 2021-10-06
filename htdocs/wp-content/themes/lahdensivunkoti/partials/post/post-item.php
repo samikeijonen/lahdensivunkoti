@@ -9,7 +9,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'post-item' ); ?>>
 	<?php if ( has_post_thumbnail() ) : ?>
 		<figure class="post-item__fig">
-            <?php the_post_thumbnail( 'medium_large' ); ?>
+            <?php the_post_thumbnail( 'lsk-large' ); ?>
 		</figure>
 	<?php endif; ?>
 	<div class="post-item__content">

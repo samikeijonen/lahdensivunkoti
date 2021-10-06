@@ -39,5 +39,7 @@ function setup() {
 			'social_links' => esc_html__( 'Social links', 'lahdensivunkoti' ),
 		]
 	);
+
+	add_image_size( 'lsk-large', 912, 684, true );
 }
 add_action( 'after_setup_theme', 'Kala\setup' );
