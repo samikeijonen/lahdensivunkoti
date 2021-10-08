@@ -14,27 +14,27 @@ namespace Kala;
  * @link https://www.billerickson.net/wordpress-color-palette-button-styling-gutenberg/
  */
 function gutenberg_styles() {
-	/*
-	Enqueue fonts that can't be self hosted:
-	enqueue_custom_fonts();
-	*/
+    /*
+    Enqueue fonts that can't be self hosted:
+    enqueue_custom_fonts();
+    */
 
-	// Add editor styles.
-	wp_enqueue_style(
-		'gutenberg-styles-editor',
-		get_theme_file_uri( 'build/editor.css' ),
-		[],
-		filemtime( get_theme_file_path( 'build/editor.css' ) )
-	);
+    // Add editor styles.
+    wp_enqueue_style(
+        'gutenberg-styles-editor',
+        get_theme_file_uri( 'build/editor.css' ),
+        [],
+        filemtime( get_theme_file_path( 'build/editor.css' ) )
+    );
 
-	// Editor related JS.
-	wp_enqueue_script(
-		'gutenberg-scripts-editor',
-		get_theme_file_uri( 'build/blocks-editor.js' ),
-		[ 'wp-blocks', 'wp-dom' ],
-		filemtime( get_theme_file_path( 'build/blocks-editor.js' ) ),
-		true
-	);
+    // Editor related JS.
+    wp_enqueue_script(
+        'gutenberg-scripts-editor',
+        get_theme_file_uri( 'build/blocks-editor.js' ),
+        [ 'wp-blocks', 'wp-dom' ],
+        filemtime( get_theme_file_path( 'build/blocks-editor.js' ) ),
+        true
+    );
 
     /**
      * Filters the allowed embeds.
@@ -56,7 +56,7 @@ add_action( 'enqueue_block_editor_assets', 'Kala\gutenberg_styles' );
  * Add theme support for needed Gutenberg features
  */
 function gutenberg_setup() {
-	remove_theme_support( 'core-block-patterns' );
+    remove_theme_support( 'core-block-patterns' );
 }
 add_action( 'after_setup_theme', 'Kala\gutenberg_setup' );
 
@@ -70,44 +70,44 @@ add_action( 'after_setup_theme', 'Kala\gutenberg_setup' );
  * @return array
  */
 function gutenberg_allowed_blocks( $allowed_blocks, $post ) {
-	// Get MEOM ACF Blocks.
-	$meom_acf_blocks = function_exists( 'MEOM\Blocks\meomblocks_acf_blocks' ) ? \MEOM\Blocks\meomblocks_acf_blocks() : false;
-	// Get MEOM Native blocks.
-	$meom_native_blocks = function_exists( 'MEOM\Blocks\meomblocks_native_blocks' ) ? \MEOM\Blocks\meomblocks_native_blocks() : false;
+    // Get MEOM ACF Blocks.
+    $meom_acf_blocks = function_exists( 'MEOM\Blocks\meomblocks_acf_blocks' ) ? \MEOM\Blocks\meomblocks_acf_blocks() : false;
+    // Get MEOM Native blocks.
+    $meom_native_blocks = function_exists( 'MEOM\Blocks\meomblocks_native_blocks' ) ? \MEOM\Blocks\meomblocks_native_blocks() : false;
 
-	// Set allowed core blocks.
-	$blocks_to_add = [
-		'core/block',
-		'core/buttons',
-		'core/button',
-		'core/image',
-		'core/paragraph',
-		'core/heading',
-		'core/list',
-		'core/embed',
-		'core/button',
-		'core/quote',
-		'core/columns',
-		'core/group',
-	];
+    // Set allowed core blocks.
+    $blocks_to_add = [
+        'core/block',
+        'core/buttons',
+        'core/button',
+        'core/image',
+        'core/paragraph',
+        'core/heading',
+        'core/list',
+        'core/embed',
+        'core/button',
+        'core/quote',
+        'core/columns',
+        'core/group',
+    ];
 
-	// Set MEOM ACF blocks.
-	if ( $meom_acf_blocks ) {
-		foreach ( $meom_acf_blocks as $block_name => $settings ) {
-			$blocks_to_add[] = 'acf/' . $block_name;
-		}
-	}
-	// Set MEOM Native blocks.
-	if ( $meom_native_blocks ) {
-		foreach ( $meom_native_blocks as $block ) {
-			$blocks_to_add[] = 'meomblocks/' . $block['slug'];
-		}
-	}
+    // Set MEOM ACF blocks.
+    if ( $meom_acf_blocks ) {
+        foreach ( $meom_acf_blocks as $block_name => $settings ) {
+            $blocks_to_add[] = 'acf/' . $block_name;
+        }
+    }
+    // Set MEOM Native blocks.
+    if ( $meom_native_blocks ) {
+        foreach ( $meom_native_blocks as $block ) {
+            $blocks_to_add[] = 'meomblocks/' . $block['slug'];
+        }
+    }
 
-	// If we remove blocks from the array, indexes need to be generated again.
-	$allowed_blocks = array_values( $blocks_to_add );
+    // If we remove blocks from the array, indexes need to be generated again.
+    $allowed_blocks = array_values( $blocks_to_add );
 
-	return $allowed_blocks;
+    return $allowed_blocks;
 }
 add_filter( 'allowed_block_types_all', 'Kala\gutenberg_allowed_blocks', 10, 2 );
 
@@ -119,23 +119,23 @@ add_filter( 'allowed_block_types_all', 'Kala\gutenberg_allowed_blocks', 10, 2 );
  * @return void
  */
 function register_gutenberg_templates() {
-	// Check if native hero block exists.
-	if ( meomblocks_block_exists( 'hero' ) ) {
-		$page_object = get_post_type_object( 'page' );
+    // Check if native hero block exists.
+    if ( meomblocks_block_exists( 'hero' ) ) {
+        $page_object = get_post_type_object( 'page' );
 
-		$template = [
-			[
-				'meomblocks/hero',
-				[],
-				[
-					[ 'core/heading', [ 'level' => 1 ] ],
-					[ 'core/paragraph', [] ],
-				],
-			],
-		];
+        $template = [
+            [
+                'meomblocks/hero',
+                [],
+                [
+                    [ 'core/heading', [ 'level' => 1 ] ],
+                    [ 'core/paragraph', [] ],
+                ],
+            ],
+        ];
 
-		$page_object->template = $template;
-	}
+        $page_object->template = $template;
+    }
 }
 add_action( 'init', 'Kala\register_gutenberg_templates' );
 

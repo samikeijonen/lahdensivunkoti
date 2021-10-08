@@ -14,21 +14,21 @@ namespace Kala;
  * @return string
  */
 function theme_archive_title( $title ) {
-	if ( is_category() ) {
-		$title = single_cat_title( '', false );
-	} elseif ( is_tag() ) {
-		$title = single_tag_title( '', false );
-	} elseif ( is_author() ) {
-		$title = '<span class="vcard">' . get_the_author() . '</span>';
-	} elseif ( is_post_type_archive() ) {
-		$title = post_type_archive_title( '', false );
-	} elseif ( is_tax() ) {
-		$title = single_term_title( '', false );
-	} elseif ( is_home() ) {
-		$title = get_the_title( get_option( 'page_for_posts' ) );
-	}
+    if ( is_category() ) {
+        $title = single_cat_title( '', false );
+    } elseif ( is_tag() ) {
+        $title = single_tag_title( '', false );
+    } elseif ( is_author() ) {
+        $title = '<span class="vcard">' . get_the_author() . '</span>';
+    } elseif ( is_post_type_archive() ) {
+        $title = post_type_archive_title( '', false );
+    } elseif ( is_tax() ) {
+        $title = single_term_title( '', false );
+    } elseif ( is_home() ) {
+        $title = get_the_title( get_option( 'page_for_posts' ) );
+    }
 
-	return $title;
+    return $title;
 }
 add_filter( 'get_the_archive_title', 'Kala\theme_archive_title' );
 
@@ -44,7 +44,7 @@ add_filter( 'wp_unique_post_slug_is_bad_attachment_slug', '__return_true' );
  * @return string
  */
 function yoast_to_bottom() {
-	return 'low';
+    return 'low';
 }
 add_filter( 'wpseo_metabox_prio', 'Kala\yoast_to_bottom', 999, 1 );
 
@@ -83,7 +83,7 @@ function social_links_icons() {
     // Supported social links icons.
     $social_links_icons = array(
         'facebook.com'  => 'facebook',
-		'instagram.com' => 'instagram',
+        'instagram.com' => 'instagram',
         'twitter.com'   => 'twitter',
     );
 

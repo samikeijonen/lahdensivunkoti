@@ -18,15 +18,15 @@ if ( $class_name ) {
 
 // Show latest article from selected category.
 $args1 = [
-	'cat' => absint( $term_id_1 )
+    'cat' => absint( $term_id_1 ),
 ];
 
 $args2 = [
-	'cat' => absint( $term_id_2 )
+    'cat' => absint( $term_id_2 ),
 ];
 
 $args3 = [
-	'cat' => absint( $term_id_3 )
+    'cat' => absint( $term_id_3 ),
 ];
 
 // Same base arguments for all.
@@ -50,19 +50,19 @@ $articles = [ $latest_posts1, $latest_posts2, $latest_posts3 ];
 
 ?>
 <div class="<?php echo esc_attr( implode( ' ', $class_names ) ); ?>">
-	<div class="grid has-3-columns">
-		<?php
-		foreach ( $articles as $article ) :
-			if ( $article ->have_posts() ) :
-				while ( $article->have_posts() ) :
-					$article->the_post();
+    <div class="grid has-3-columns">
+        <?php
+        foreach ( $articles as $article ) :
+            if ( $article->have_posts() ) :
+                while ( $article->have_posts() ) :
+                    $article->the_post();
 
-					get_template_part( 'partials/post/post-item' );
-				endwhile;
-			endif;
-		endforeach;
-		?>
-	</div>
+                    get_template_part( 'partials/post/post-item' );
+                endwhile;
+            endif;
+        endforeach;
+        ?>
+    </div>
 </div>
 <?php
 wp_reset_postdata();

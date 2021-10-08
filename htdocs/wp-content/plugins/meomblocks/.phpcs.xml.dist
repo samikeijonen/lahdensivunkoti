@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <ruleset name="WordPress Theme Coding Standards">
-  <rule ref="Foxland-Default"/>
+  <rule ref="MEOM-default"/>
 
 	<!-- Check all files in this directory and the directories below it. -->
 	<file>.</file>
@@ -20,10 +20,5 @@
 				<element value="meom-blocks"/>
 			</property>
 		</properties>
-	</rule>
-
-	<rule ref="WordPress-Extra">
-		<!-- Do not force Yoda conditions. -->
-        <exclude name="WordPress.PHP.YodaConditions" />
 	</rule>
 </ruleset>

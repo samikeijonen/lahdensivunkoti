@@ -13,27 +13,27 @@ namespace Kala;
  * @return void
  */
 function enqueue_scripts() {
-	global $wp_styles;
+    global $wp_styles;
 
-	wp_enqueue_style(
-		'theme-styles',
-		get_theme_file_uri( 'build/theme.css' ),
-		[],
-		filemtime( get_theme_file_path( 'build/theme.css' ) )
-	);
+    wp_enqueue_style(
+        'theme-styles',
+        get_theme_file_uri( 'build/theme.css' ),
+        [],
+        filemtime( get_theme_file_path( 'build/theme.css' ) )
+    );
 
-	wp_enqueue_script(
-		'theme-scripts',
-		get_theme_file_uri( 'build/main.js' ),
-		[],
-		filemtime( get_theme_file_path( 'build/main.js' ) ),
-		true
-	);
+    wp_enqueue_script(
+        'theme-scripts',
+        get_theme_file_uri( 'build/main.js' ),
+        [],
+        filemtime( get_theme_file_path( 'build/main.js' ) ),
+        true
+    );
 
-	wp_deregister_script( 'wp-embed' );
+    wp_deregister_script( 'wp-embed' );
 
-	// Dequeue Core block styles.
-	wp_dequeue_style( 'wp-block-library' );
+    // Dequeue Core block styles.
+    wp_dequeue_style( 'wp-block-library' );
 }
 add_action( 'wp_enqueue_scripts', 'Kala\enqueue_scripts' );
 
@@ -43,12 +43,12 @@ add_action( 'wp_enqueue_scripts', 'Kala\enqueue_scripts' );
  * @return void
  */
 function enqueue_block_assets() {
-	// Overwrite Core block styles with empty styles.
-	wp_deregister_style( 'wp-block-library' );
+    // Overwrite Core block styles with empty styles.
+    wp_deregister_style( 'wp-block-library' );
     wp_register_style( 'wp-block-library', '' ); // phpcs:ignore
 
-	// Overwrite Core theme styles with empty styles.
-	wp_deregister_style( 'wp-block-library-theme' );
+    // Overwrite Core theme styles with empty styles.
+    wp_deregister_style( 'wp-block-library-theme' );
     wp_register_style( 'wp-block-library-theme', '' ); // phpcs:ignore
 }
 add_action( 'enqueue_block_assets', 'Kala\enqueue_block_assets' );
@@ -59,13 +59,13 @@ add_action( 'enqueue_block_assets', 'Kala\enqueue_block_assets' );
  * @return void
  */
 function preload_fonts() {
-	$fonts = [
-		THEME_URI . '/fonts/montserrat-v18-latin-regular.woff2' => 'woff2',
-		THEME_URI . '/fonts/montserrat-v18-latin-700.woff2' => 'woff2',
-		THEME_URI . '/fonts/cormorant-sc-v11-latin-700.woff2' => 'woff2',
-	];
-	foreach ( $fonts as $font_link => $font_type ) {
-		echo '<link rel="preload" href="' . esc_url( $font_link ) . '" as="font" type="font/' . esc_attr( $font_type ) . '" crossorigin>';
-	}
+    $fonts = [
+        THEME_URI . '/fonts/montserrat-v18-latin-regular.woff2' => 'woff2',
+        THEME_URI . '/fonts/montserrat-v18-latin-700.woff2' => 'woff2',
+        THEME_URI . '/fonts/cormorant-sc-v11-latin-700.woff2' => 'woff2',
+    ];
+    foreach ( $fonts as $font_link => $font_type ) {
+        echo '<link rel="preload" href="' . esc_url( $font_link ) . '" as="font" type="font/' . esc_attr( $font_type ) . '" crossorigin>';
+    }
 }
 add_action( 'wp_head', 'Kala\preload_fonts', 1 );

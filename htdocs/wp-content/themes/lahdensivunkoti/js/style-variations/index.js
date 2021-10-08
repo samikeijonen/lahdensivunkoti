@@ -7,13 +7,13 @@ wp.domReady(() => {
     wp.blocks.unregisterBlockStyle('core/button', 'squared');
     wp.blocks.unregisterBlockStyle('core/button', 'fill');
 
-	 // Register button styles.
-	 wp.blocks.registerBlockStyle('core/button', {
+    // Register button styles.
+    wp.blocks.registerBlockStyle('core/button', {
         name: 'secondary',
         label: __('Secondary', 'lahdensivunkoti'),
     });
 
-	 wp.blocks.registerBlockStyle('core/button', {
+    wp.blocks.registerBlockStyle('core/button', {
         name: 'white-bg',
         label: __('White background', 'lahdensivunkoti'),
     });

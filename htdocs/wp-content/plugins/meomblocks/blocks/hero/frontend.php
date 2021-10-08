@@ -16,7 +16,7 @@ $extra_class .= 'hero--style-' . $style;
 
 // Render hero from theme, if available.
 $theme_partial = 'partials/global/hero';
-if ( $content && function_exists( 'Kala\render_partial' ) && file_exists( get_template_directory() . '/' . $theme_partial . '.php'  ) ) :
+if ( $content && function_exists( 'Kala\render_partial' ) && file_exists( get_template_directory() . '/' . $theme_partial . '.php' ) ) :
     Kala\render_partial(
         $theme_partial,
         array(
@@ -30,7 +30,7 @@ if ( $content && function_exists( 'Kala\render_partial' ) && file_exists( get_te
 elseif ( $content ) :
     $class = 'hero ' . $extra_class . ' alignfull content-row'; ?>
     <div class="<?php echo esc_html( $class ); ?>">
-		<div class="hero__container container">
+        <div class="hero__container container">
             <div class="hero__content">
                 <?php echo do_blocks( $content ); ?>
             </div>

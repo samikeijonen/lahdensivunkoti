@@ -22,7 +22,7 @@ export default registerBlockType(name, {
 
         const classes = classNames({
             [`${BLOCK_SLUG}`]: true,
-            ['alignfull']: true,
+            ['alignfull']: true, // eslint-disable-line
             [`${className}`]: className ? true : false,
         });
 

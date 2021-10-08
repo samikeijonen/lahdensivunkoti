@@ -12,19 +12,19 @@ $wrapper_attributes = get_block_wrapper_attributes( [ 'class' => 'social-links a
 
 ?>
 <div <?php echo $wrapper_attributes; ?>>
-	<div class="social-links__wrapper alignwide mx-auto">
-		<h2 class="social-links__text"><?php echo esc_html( $text ); ?></h2>
+    <div class="social-links__wrapper alignwide mx-auto">
+        <h2 class="social-links__text"><?php echo esc_html( $text ); ?></h2>
 
-		<?php
-		// Render social links from theme, if available.
-		$theme_partial = 'partials/global/social-links-nav';
-		if ( function_exists( 'Kala\render_partial' ) && file_exists( get_template_directory() . '/' . $theme_partial . '.php'  ) ) :
-			Kala\render_partial(
-				$theme_partial,
-				[]
-			);
-		endif;
-		?>
-	</div>
+        <?php
+        // Render social links from theme, if available.
+        $theme_partial = 'partials/global/social-links-nav';
+        if ( function_exists( 'Kala\render_partial' ) && file_exists( get_template_directory() . '/' . $theme_partial . '.php' ) ) :
+            Kala\render_partial(
+                $theme_partial,
+                []
+            );
+        endif;
+        ?>
+    </div>
 </div>
 <?php
