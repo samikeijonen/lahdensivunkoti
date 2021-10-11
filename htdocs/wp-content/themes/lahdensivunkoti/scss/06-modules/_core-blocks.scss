@@ -279,7 +279,7 @@ blockquote {
     justify-content: space-between;
 }
 
-.social-links__text {
+.social-links h2 {
     @include text-style(h2-bigger);
 }
 
@@ -339,6 +339,10 @@ ul.wp-block-social-links {
     svg {
         height: 2em;
         width: 2em;
+    }
+
+    a {
+        display: block;
     }
 }
 

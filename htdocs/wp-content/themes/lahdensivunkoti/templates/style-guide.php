@@ -50,7 +50,7 @@ while ( have_posts() ) :
     <?php
     $colors = $json_data['settings']['custom']['color'];
     foreach ( $colors as $key => $value ) : ?>
-        <h3><?php echo $key; ?></h3>
+        <h3><?php echo esc_attr( $key ); ?></h3>
         <ul class="tokens tokens--colors grid has-4-columns">
             <?php foreach ( $value as $color ) : ?>
                 <li class="tokens__item">
@@ -65,14 +65,14 @@ while ( have_posts() ) :
     <?php
     $fonts = $json_data['settings']['custom']['font'];
     foreach ( $fonts as $key => $value ) : ?>
-        <p><?php echo esc_attr( $key ); ?>: <span style="font-family: <?php echo esc_attr( $value ); ?>;"><?php echo $value; ?></span></p>
+        <p><?php echo esc_attr( $key ); ?>: <span style="font-family: <?php echo esc_attr( $value ); ?>;"><?php echo esc_attr( $value ); ?></span></p>
     <?php endforeach; ?>
 
     <h2>spacing</h2>
     <?php
     $spacing = $json_data['settings']['custom']['spacing'];
     foreach ( $spacing as $key => $value ) : ?>
-        <p><span class="token__width" style="width: <?php echo esc_attr( $value ); ?>;"></span><?php echo $value; ?></p>
+        <p><span class="token__width" style="width: <?php echo esc_attr( $value ); ?>;"></span><?php echo esc_attr( $value ); ?></p>
     <?php endforeach; ?>
 
     </article>

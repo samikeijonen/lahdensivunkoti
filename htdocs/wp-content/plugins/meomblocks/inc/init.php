@@ -20,7 +20,7 @@ function block_category( $categories ) {
     return array_merge(
         array(
             array(
-                'title' => __( $config['category']['name'], 'meom-blocks' ),
+                'title' => $config['category']['name'],
                 'slug'  => $config['category']['slug'],
             ),
         ),

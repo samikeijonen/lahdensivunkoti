@@ -1,8 +1,7 @@
 import classNames from 'classnames';
 
-const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
-const { RichText, useBlockProps } = wp.blockEditor;
+const { InnerBlocks, useBlockProps } = wp.blockEditor;
 
 import metadata from './block.json';
 
@@ -10,15 +9,16 @@ const { name } = metadata;
 
 const BLOCK_SLUG = 'social-links';
 
+const CHILD_BLOCK = 'social-links-nav';
+const ALLOWED_BLOCKS = [`${metadata.category}/${CHILD_BLOCK}`, 'core/heading'];
+const TEMPLATE = [
+    ['core/heading', { level: 2 }],
+    [`${metadata.category}/${CHILD_BLOCK}`, {}],
+];
+
 export default registerBlockType(name, {
     edit: (props) => {
-        const {
-            attributes: { text },
-            className,
-            setAttributes,
-        } = props;
-
-        const textClass = `${BLOCK_SLUG}__text`;
+        const { className } = props;
 
         const classes = classNames({
             [`${BLOCK_SLUG}`]: true,
@@ -33,20 +33,15 @@ export default registerBlockType(name, {
         return (
             <div {...blockProps}>
                 <div className="social-links__wrapper alignwide mx-auto">
-                    <RichText
-                        tagName="h2"
-                        allowedFormats={[]}
-                        className={textClass}
-                        placeholder={__('Example text', 'meom-blocks')}
-                        onChange={(newText) => setAttributes({ text: newText })}
-                        value={text}
+                    <InnerBlocks
+                        allowedBlocks={ALLOWED_BLOCKS}
+                        template={TEMPLATE}
+                        templateLock="all"
                     />
                 </div>
             </div>
         );
     },
 
-    save: () => {
-        return null;
-    },
+    save: () => <InnerBlocks.Content />,
 });
