@@ -10,7 +10,7 @@
     display: inline-block;
     font-weight: 700;
     letter-spacing: 0.05em;
-    line-height: 1;
+    line-height: var(--wp--custom--typography--lh--sm);
     padding: var(--wp--custom--spacing--2) var(--wp--custom--spacing--4);
     text-decoration: none;
     text-transform: uppercase;

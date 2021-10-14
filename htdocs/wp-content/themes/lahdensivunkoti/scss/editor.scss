@@ -11,7 +11,8 @@
 @import "02-tools/mixin";
 
 body .editor-styles-wrapper {
-    @include text-style(body);
+    font-size: var(--wp--custom--typography--text--0);
+    line-height: var(--wp--custom--typography--lh--xl);
     font-family: var(--wp--custom--font--sans);
     color: var(--wp--custom--color--grey--700);
 
@@ -47,7 +48,6 @@ body .editor-styles-wrapper {
     # Utilities - Helpers and overrides.
     --------------------------------------------------------------*/
     @import "07-utilities/alignments";
-    @import "07-utilities/font-sizes";
 }
 
 // Reset content row margins, there is plenty of margin in the editor without these.

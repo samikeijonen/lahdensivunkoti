@@ -225,14 +225,10 @@ blockquote {
     @include small-bottom-margin();
 
     p {
-        @include font-size(26);
+        font-size: var(--wp--custom--typography--text--2);
+        line-height: var(--wp--custom--typography--lh--md);
         font-style: italic;
         font-weight: 600;
-        line-height: 1.2;
-
-        @include media-min(medium) {
-            @include font-size(32);
-        }
     }
 
     cite,
@@ -280,7 +276,8 @@ blockquote {
 }
 
 .social-links h2 {
-    @include text-style(h2-bigger);
+    font-size: var(--wp--custom--typography--text--5);
+    line-height: var(--wp--custom--typography--lh--xs);
 }
 
 ul.wp-block-social-links {
@@ -288,28 +285,6 @@ ul.wp-block-social-links {
     flex-wrap: wrap;
     list-style-type: none;
     padding-left: 0;
-
-    // Icon sizes.
-    // Small.
-    &.has-small-icon-size {
-        @include font-size(16);
-    }
-
-    // Normal/default.
-    &,
-    &.has-normal-icon-size {
-        @include font-size(22);
-    }
-
-    // Large.
-    &.has-large-icon-size {
-        @include font-size(32);
-    }
-
-    // Huge.
-    &.has-huge-icon-size {
-        @include font-size(48);
-    }
 
     // Center flex items. This has an equivalent in editor.scss.
     // It also needs to override some of the default classes usually applied to the centering class.

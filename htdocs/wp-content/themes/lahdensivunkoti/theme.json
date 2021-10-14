@@ -33,6 +33,28 @@
                 "10": "5rem",
                 "16": "8rem"
             },
+            "typography": {
+                "scale": "1.25",
+                "lh": {
+                    "none": "1",
+                    "xs": "1.1",
+                    "sm": "1.2",
+                    "md": "1.3",
+                    "lg": "1.4",
+                    "xl": "1.6"
+                },
+                "text": {
+                    "-2": "clamp(0.89rem, 0.93rem + -0.18vw, 0.80rem)",
+                    "-1": "clamp(1.00rem, 1.00rem + 0.00vw, 1.00rem)",
+                    "0": "clamp(1.13rem, 1.07rem + 0.25vw, 1.25rem)",
+                    "1": "clamp(1.27rem, 1.14rem + 0.59vw, 1.56rem)",
+                    "2": "clamp(1.42rem, 1.20rem + 1.06vw, 1.95rem)",
+                    "3": "clamp(1.60rem, 1.25rem + 1.68vw, 2.44rem)",
+                    "4": "clamp(1.80rem, 1.27rem + 2.50vw, 3.05rem)",
+                    "5": "clamp(2.03rem, 1.27rem + 3.58vw, 3.82rem)",
+                    "6": "clamp(2.28rem, 1.22rem + 4.98vw, 4.77rem)"
+                }
+            },
             "width": {
                 "site-max": "125rem",
                 "container": "87.5rem",

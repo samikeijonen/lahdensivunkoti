@@ -6,7 +6,8 @@
 }
 
 .site-footer h2 {
-    @include text-style(h2-bigger);
+    font-size: var(--wp--custom--typography--text--5);
+    line-height: var(--wp--custom--typography--lh--xs);
 }
 
 .site-footer__text {

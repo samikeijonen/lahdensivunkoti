@@ -1,3 +1,5 @@
+/* @link https://utopia.fyi/type/calculator?c=340,18,1.125,1140,20,1.25,6,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+
 html {
     // To make sure user browser setting for font size is respected.
     font-size: 100%;
@@ -13,7 +15,8 @@ button,
 input,
 select,
 textarea {
-    @include text-style(body);
+    font-size: var(--wp--custom--typography--text--0);
+    line-height: var(--wp--custom--typography--lh--xl);
     font-family: var(--wp--custom--font--sans);
     color: var(--wp--custom--color--grey--700);
 }
@@ -51,29 +54,38 @@ h6 {
     }
 }
 
-// Note that classes .h#{$i} and .has-h-#{$i}-font-size can be found in 07-utilities/_font-sizes.scss file.
-// This is because order and hierarchy of CSS rules.
-// We want to make sure utility classes overwrite font-size even if something have been changed for example in modules.
-h1 {
-    @include text-style(h1);
+h1,
+.h1 {
+    font-size: var(--wp--custom--typography--text--6);
+    line-height: var(--wp--custom--typography--lh--xs);
 }
 
-h2 {
-    @include text-style(h2);
+h2,
+.h2 {
+    font-size: var(--wp--custom--typography--text--3);
+    line-height: var(--wp--custom--typography--lh--md);
 }
 
-h3 {
-    @include text-style(h3);
+h3,
+.h3 {
+    font-size: var(--wp--custom--typography--text--2);
+    line-height: var(--wp--custom--typography--lh--md);
 }
 
-h4 {
-    @include text-style(h4);
+h4,
+.h4 {
+    font-size: var(--wp--custom--typography--text--1);
+    line-height: var(--wp--custom--typography--lh--lg);
 }
 
-h5 {
-    @include text-style(h5);
+h5,
+.h5 {
+    font-size: var(--wp--custom--typography--text--0);
+    line-height: var(--wp--custom--typography--lh--lg);
 }
 
-h6 {
-    @include text-style(h6);
+h6,
+.h6 {
+    font-size: var(--wp--custom--typography--text--0);
+    line-height: var(--wp--custom--typography--lh--lg);
 }
