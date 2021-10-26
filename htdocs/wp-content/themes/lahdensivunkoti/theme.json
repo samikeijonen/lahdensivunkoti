@@ -5,6 +5,7 @@
             "color": {
                 "theme": {
                     "green": "#e3f0e3",
+                    "green-900": "#041d04",
                     "beige": "#f9edda"
                 },
                 "grey": {

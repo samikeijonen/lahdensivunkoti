@@ -277,6 +277,14 @@ blockquote {
     flex-wrap: wrap;
     gap: var(--wp--custom--spacing--2);
     justify-content: space-between;
+
+    @include media-min(medium-large) {
+        flex-wrap: nowrap;
+
+        .wp-block-social-links-wrapper {
+            flex-shrink: 0;
+        }
+    }
 }
 
 .social-links h2 {

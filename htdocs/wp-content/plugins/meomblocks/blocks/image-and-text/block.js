@@ -16,6 +16,7 @@ const ALLOWED_BLOCKS = [
     'core/heading',
     'core/button',
     'core/quote',
+    'core/list',
     'core/social-links',
     'core/social-link',
 ];

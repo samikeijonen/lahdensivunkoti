@@ -1,12 +1,12 @@
 .hero {
     @include small-top-padding();
     @include small-bottom-padding();
-    background-color: var(--wp--custom--color--grey--700);
+    background-color: var(--wp--custom--color--theme--green-900);
     margin-bottom: 0;
     position: relative;
 
     &::before {
-        background-color: var(--wp--custom--color--grey--900);
+        background-color: var(--wp--custom--color--theme--green-900);
         bottom: 0;
         content: "";
         height: 100%;
@@ -26,10 +26,6 @@
         // Plus side paddings.
         max-width: calc(var(--wp--custom--width--container-wide) + var(--side-padding) * 2);
         min-height: 20rem;
-
-        @include media-min(medium) {
-            min-height: 30rem;
-        }
     }
 
     &__content {
@@ -56,6 +52,12 @@
             width: 100%;
             z-index: 0;
         }
+    }
+}
+
+.home .hero__container {
+    @include media-min(medium) {
+        min-height: 30rem;
     }
 }
 
