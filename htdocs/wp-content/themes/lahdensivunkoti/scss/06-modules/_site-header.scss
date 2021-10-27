@@ -24,3 +24,11 @@
         flex-wrap: wrap;
     }
 }
+
+.site-header__logo {
+    max-width: 10rem;
+
+    @include media-min(navigation) {
+        max-width: 13rem;
+    }
+}
