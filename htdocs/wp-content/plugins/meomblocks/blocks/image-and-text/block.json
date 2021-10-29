@@ -17,7 +17,7 @@
 			"default": "green-light"
 		},
 		"image": {
-		"type": "object"
+			"type": "object"
 		}
 	}
 }

@@ -4,5 +4,10 @@
     "title": "Social links",
     "category": "meomblocks",
     "icon": "share",
-    "keywords": ["social", "posts", "lahdensivun"]
+    "keywords": ["social", "posts", "lahdensivun"],
+    "attributes": {
+		"image": {
+		    "type": "object"
+		}
+	}
 }

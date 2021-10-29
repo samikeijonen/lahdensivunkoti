@@ -3,7 +3,11 @@ import classNames from 'classnames';
 const { registerBlockType } = wp.blocks;
 const { InnerBlocks, useBlockProps } = wp.blockEditor;
 
+/**
+ * Internal dependencies
+ */
 import metadata from './block.json';
+import ImageSelect from '../../components/image-select';
 
 const { name } = metadata;
 
@@ -18,7 +22,11 @@ const TEMPLATE = [
 
 export default registerBlockType(name, {
     edit: (props) => {
-        const { className } = props;
+        const {
+            attributes: { image },
+            setAttributes,
+            className,
+        } = props;
 
         const classes = classNames({
             [`${BLOCK_SLUG}`]: true,
@@ -39,6 +47,15 @@ export default registerBlockType(name, {
                         templateLock="all"
                     />
                 </div>
+
+                <figure className={`social-links__image`}>
+                    <ImageSelect
+                        image={image}
+                        onChange={(newImage) =>
+                            setAttributes({ image: newImage })
+                        }
+                    />
+                </figure>
             </div>
         );
     },

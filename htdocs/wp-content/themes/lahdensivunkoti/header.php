@@ -19,7 +19,7 @@ get_template_part( 'partials/header/head' );
                 <div class="site-header__title">
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
                         <span class="screen-reader-text"><?php bloginfo( 'name' ); ?></span>
-                        <img class="site-header__logo" alt="" width="720" height="264" src="<?php echo esc_url( get_theme_file_uri( 'images/icons/logo-naisyhdistys.svg' ) ); ?>">
+                        <img class="site-header__logo" alt="" width="723" height="265" src="<?php echo esc_url( get_theme_file_uri( 'images/icons/logo.svg' ) ); ?>">
                     </a>
                 </div>
 
