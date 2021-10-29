@@ -7,6 +7,10 @@
         background-color: var(--wp--custom--color--theme--beige);
     }
 
+    &.has-grey-light-background {
+        background-color: var(--wp--custom--color--grey--100);
+    }
+
     &__container {
         @include media-min(medium) {
             align-items: center;
@@ -50,6 +54,7 @@
 }
 
 .image-and-text + .image-and-text,
-.image-and-text + .has-background {
+.image-and-text + .has-background,
+.hero + .image-and-text {
     margin-top: 0;
 }

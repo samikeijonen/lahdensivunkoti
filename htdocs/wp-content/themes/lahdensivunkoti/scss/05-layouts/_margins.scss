@@ -68,7 +68,8 @@ figure {
 .content-area .has-background + .image-and-text,
 .content-area .image-and-text + .has-background,
 .content-area .social-links + .has-background,
-.content-area .social-links + .image-and-text {
+.content-area .social-links + .image-and-text,
+.content-area .image-and-text + .social-links {
     margin-top: 0;
 }
 

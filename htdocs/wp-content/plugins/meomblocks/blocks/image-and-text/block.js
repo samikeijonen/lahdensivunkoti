@@ -115,6 +115,10 @@ const Sidebar = (props) => {
                             label: __('Vaaleanbeige', 'meomblocks'),
                             value: 'beige-light',
                         },
+                        {
+                            label: __('Vaaleanharmaa', 'meomblocks'),
+                            value: 'grey-light',
+                        },
                     ]}
                     onChange={(newbackgroundColor) => {
                         setAttributes({ backgroundColor: newbackgroundColor });

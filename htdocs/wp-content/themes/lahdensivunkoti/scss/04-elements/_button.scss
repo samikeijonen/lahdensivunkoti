@@ -8,7 +8,7 @@
     color: var(--wp--custom--color--neutral--white);
     cursor: pointer;
     display: inline-block;
-    font-weight: 700;
+    font-weight: 500;
     letter-spacing: 0.05em;
     line-height: 1.2;
     padding: var(--wp--custom--spacing--2) var(--wp--custom--spacing--4);
@@ -17,7 +17,7 @@
     transition: background-color var(--wp--custom--transition--3);
 
     @include media-min(medium) {
-        @include font-size(20);
+        @include font-size(18);
     }
 
     &:hover,

@@ -93,6 +93,11 @@
                             "slug": "green-light",
                             "color": "var(--wp--custom--color--theme--green)",
                             "name": "Green light"
+                        },
+                        {
+                            "slug": "grey-light",
+                            "color": "var(--wp--custom--color--grey--100)",
+                            "name": "Grey light"
                         }
                     ]
                 }
