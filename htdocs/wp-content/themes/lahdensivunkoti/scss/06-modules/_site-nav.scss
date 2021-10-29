@@ -32,6 +32,8 @@
 }
 
 .site-nav__items > .menu-item {
+    position: relative;
+
     @include media-min(navigation) {
         margin-right: var(--wp--custom--spacing--4);
 
@@ -41,15 +43,24 @@
     }
 }
 
+.menu-item-has-children {
+    @include media-min(navigation) {
+        display: flex;
+    }
+}
+
 .site-nav__items a {
     @include font-size(14);
     color: var(--wp--custom--color--grey--700);
-    display: block;
     font-weight: 700;
     letter-spacing: 0.025em;
     padding: var(--wp--custom--spacing--2);
     text-decoration: none;
     text-transform: uppercase;
+
+    @include media(navigation) {
+        display: block;
+    }
 
     @include media-min(navigation) {
         padding: var(--wp--custom--spacing--1) 0;
@@ -63,6 +74,37 @@
 
 .menu-item [aria-current="page"] {
     text-decoration: underline;
+}
+
+.sub-menu {
+    @include reset-list();
+    
+    a {
+        text-transform: none;
+    }
+
+    @include media-min(navigation) {
+        background-color: var(--wp--custom--color--grey--200);
+        left: -999em;
+        opacity: 0;
+        margin-top: 0;
+        padding: var(--wp--custom--spacing--2);
+        position: absolute;
+        text-align: left;
+        top: 100%;
+        transform: translateY(-10%);
+        transition: transform var(--wp--custom--transition--3), opacity var(--wp--custom--transition--3);
+        visibility: hidden;
+        z-index: 300;
+
+        &.is-opened {
+            left: 0;
+            opacity: 1;
+            transform: translateY(0);
+            visibility: visible;
+        }
+    }
+    
 }
 
 .site-nav__toggle {
@@ -83,5 +125,30 @@
 
     @include media-min(navigation) {
         display: none;
+    }
+}
+
+.site-nav__sub-toggle {
+    @include media(navigation) {
+        display: none;
+    }
+
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    display: inline-block;
+    padding: var(--wp--custom--spacing--1-2);
+    margin-left: var(--wp--custom--spacing--1-2);
+    transition: transform var(--transition-duration-md) ease-in-out;
+
+    svg {
+        pointer-events: none;
+        transition: transform var(--wp--custom--transition--3);
+    }
+}
+
+.site-nav__sub-toggle[aria-expanded="true"] {
+    svg {
+        transform: rotate(-180deg)
     }
 }

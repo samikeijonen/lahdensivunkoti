@@ -6,6 +6,7 @@ const siteNav = () => {
     const navToggle = document.querySelector('.js-site-nav-toggle');
 
     new Navigation(navElement, navToggle, {
+        action: 'hover',
         subNavAnchors: '.js-site-nav-items > .menu-item-has-children > a',
         subSubNavAnchors:
             '.js-site-nav-items .sub-menu > .menu-item-has-children > a',

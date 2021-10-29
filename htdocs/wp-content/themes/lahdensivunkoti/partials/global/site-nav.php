@@ -32,7 +32,7 @@ endif;
                 'menu_id'        => 'site-nav-items',
                 'menu_class'     => 'site-nav__items animated js-site-nav-items',
                 'container'      => false,
-                'depth'          => 1,
+                'depth'          => 2,
                 'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s<li class="menu-item menu-item--social-link">' . $social_links . '</li></ul>',
             ]
         );
