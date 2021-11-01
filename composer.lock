@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bba819b0386a6a3e1420e1ebe42c0854",
+    "content-hash": "9191410dc832c7719a9f3a73e0e5f21d",
     "packages": [
         {
             "name": "composer/installers",
@@ -205,16 +205,16 @@
         },
         {
             "name": "graham-campbell/result-type",
-            "version": "v1.0.2",
+            "version": "v1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Result-Type.git",
-                "reference": "84afea85c6841deeea872f36249a206e878a5de0"
+                "reference": "296c015dc30ec4322168c5ad3ee5cc11dae827ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Result-Type/zipball/84afea85c6841deeea872f36249a206e878a5de0",
-                "reference": "84afea85c6841deeea872f36249a206e878a5de0",
+                "url": "https://api.github.com/repos/GrahamCampbell/Result-Type/zipball/296c015dc30ec4322168c5ad3ee5cc11dae827ac",
+                "reference": "296c015dc30ec4322168c5ad3ee5cc11dae827ac",
                 "shasum": ""
             },
             "require": {
@@ -250,7 +250,7 @@
             ],
             "support": {
                 "issues": "https://github.com/GrahamCampbell/Result-Type/issues",
-                "source": "https://github.com/GrahamCampbell/Result-Type/tree/v1.0.2"
+                "source": "https://github.com/GrahamCampbell/Result-Type/tree/v1.0.3"
             },
             "funding": [
                 {
@@ -262,7 +262,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-08-28T21:34:50+00:00"
+            "time": "2021-10-17T19:48:54+00:00"
         },
         {
             "name": "johnpbloch/wordpress-core",
@@ -819,10 +819,10 @@
         },
         {
             "name": "koodimonni-plugin-language/woocommerce-fi",
-            "version": "5.7.1",
+            "version": "5.8.0",
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/translation/plugin/woocommerce/5.7.1/fi.zip"
+                "url": "https://downloads.wordpress.org/translation/plugin/woocommerce/5.8.0/fi.zip"
             },
             "require": {
                 "koodimonni/composer-dropin-installer": ">=0.2.3"
@@ -838,10 +838,10 @@
         },
         {
             "name": "koodimonni-plugin-language/woocommerce-sv_se",
-            "version": "5.7.1",
+            "version": "5.8.0",
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/translation/plugin/woocommerce/5.7.1/sv_SE.zip"
+                "url": "https://downloads.wordpress.org/translation/plugin/woocommerce/5.8.0/sv_SE.zip"
             },
             "require": {
                 "koodimonni/composer-dropin-installer": ">=0.2.3"
@@ -1599,16 +1599,16 @@
         },
         {
             "name": "seravo/seravo-plugin",
-            "version": "1.9.31",
+            "version": "1.9.32",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seravo/seravo-plugin.git",
-                "reference": "b70d3dddec7a8c116d03cf9393175ebed41adee5"
+                "reference": "ba6a43e6970c04587789ccf0502830dff6299c83"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seravo/seravo-plugin/zipball/b70d3dddec7a8c116d03cf9393175ebed41adee5",
-                "reference": "b70d3dddec7a8c116d03cf9393175ebed41adee5",
+                "url": "https://api.github.com/repos/Seravo/seravo-plugin/zipball/ba6a43e6970c04587789ccf0502830dff6299c83",
+                "reference": "ba6a43e6970c04587789ccf0502830dff6299c83",
                 "shasum": ""
             },
             "require": {
@@ -1683,9 +1683,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Seravo/seravo-plugin/issues",
-                "source": "https://github.com/Seravo/seravo-plugin/tree/1.9.31"
+                "source": "https://github.com/Seravo/seravo-plugin/tree/1.9.32"
             },
-            "time": "2021-09-27T10:14:59+00:00"
+            "time": "2021-10-19T12:41:42+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -2087,6 +2087,24 @@
             "time": "2021-10-02T19:24:42+00:00"
         },
         {
+            "name": "wpackagist-plugin/contact-form-7",
+            "version": "5.5.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/contact-form-7/",
+                "reference": "tags/5.5.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/contact-form-7.5.5.2.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0 || ~2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/contact-form-7/"
+        },
+        {
             "name": "wpackagist-plugin/imagify",
             "version": "1.10",
             "source": {
@@ -2106,15 +2124,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "17.3",
+            "version": "17.4",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/17.3"
+                "reference": "tags/17.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.17.3.zip"
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.17.4.zip"
             },
             "require": {
                 "composer/installers": "~1.0 || ~2.0"
@@ -2405,16 +2423,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.6.0",
+            "version": "3.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "ffced0d2c8fa8e6cdc4d695a743271fab6c38625"
+                "reference": "f268ca40d54617c6e06757f83f699775c9b3ff2e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/ffced0d2c8fa8e6cdc4d695a743271fab6c38625",
-                "reference": "ffced0d2c8fa8e6cdc4d695a743271fab6c38625",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/f268ca40d54617c6e06757f83f699775c9b3ff2e",
+                "reference": "f268ca40d54617c6e06757f83f699775c9b3ff2e",
                 "shasum": ""
             },
             "require": {
@@ -2457,7 +2475,7 @@
                 "source": "https://github.com/squizlabs/PHP_CodeSniffer",
                 "wiki": "https://github.com/squizlabs/PHP_CodeSniffer/wiki"
             },
-            "time": "2021-04-09T00:54:41+00:00"
+            "time": "2021-10-11T04:00:11+00:00"
         },
         {
             "name": "wp-coding-standards/wpcs",
@@ -2522,5 +2540,5 @@
         "php": ">=7.2"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.1.0"
 }

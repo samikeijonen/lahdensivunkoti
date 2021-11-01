@@ -14,8 +14,8 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-    border: 1px solid #808080;
-    padding: 0.6rem;
+    border: 1px solid var(--wp--custom--color--grey--700);
+    padding: var(--wp--custom--spacing--1);
     width: 100%;
 }
 
@@ -23,8 +23,8 @@ select {
     line-height: 1.5;
     // appearance: none;
     height: 2.8rem;
-    border: 1px solid #808080;
-    padding: 0.75rem;
+    border: 1px solid var(--wp--custom--color--grey--700);
+    padding: var(--wp--custom--spacing--1);
     width: 100%;
     border-radius: 0;
     background: transparent;

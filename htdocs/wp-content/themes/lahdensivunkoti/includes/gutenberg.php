@@ -89,6 +89,7 @@ function gutenberg_allowed_blocks( $allowed_blocks, $post ) {
         'core/quote',
         'core/columns',
         'core/group',
+        'core/shortcode',
     ];
 
     // Set MEOM ACF blocks.
