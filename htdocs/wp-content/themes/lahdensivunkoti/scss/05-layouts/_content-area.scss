@@ -12,22 +12,6 @@
         max-width: var(--wp--custom--width--container-medium);
     }
 
-    > ul,
-    > ol {
-        padding-left: var(--wp--custom--spacing--3);
-        @include media-min(medium) {
-            padding-left: var(--wp--custom--spacing--4);
-        }
-
-        > li {
-            margin-top: var(--wp--custom--spacing--1);
-        }
-
-        > li:first-child {
-            margin-top: 0;
-        }
-    }
-
     // If there is aligned elements, the layout will break so clear those.
     .alignleft,
     .alignright,

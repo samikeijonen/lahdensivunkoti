@@ -21,6 +21,7 @@ body .editor-styles-wrapper {
     // Let typography be the first so other can inherit from that.
     @import "04-elements/typography";
     @import "04-elements/button";
+    @import "04-elements/list";
     @import "04-elements/media";
     @import "04-elements/table";
 
@@ -93,4 +94,10 @@ body .editor-styles-wrapper {
 // Some select-fields in the sidebar are height: 100%, I don't know why.
 .components-flex.components-select-control {
     height: auto;
+}
+
+// Fix ul and ol
+.editor-styles-wrapper.editor-styles-wrapper ul,
+.editor-styles-wrapper.editor-styles-wrapper ol {
+    box-sizing: border-box;
 }
