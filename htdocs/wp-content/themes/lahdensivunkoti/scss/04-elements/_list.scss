@@ -1,5 +1,7 @@
-ul,
-ol {
+.content-area > ul,
+.content-area > ol,
+.image-and-text__content > ul,
+.image-and-text__content > ol {
     padding-left: var(--wp--custom--spacing--3);
 
     @include media-min(medium) {
