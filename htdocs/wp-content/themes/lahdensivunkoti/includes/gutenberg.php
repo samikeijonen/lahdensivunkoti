@@ -90,8 +90,6 @@ function gutenberg_allowed_blocks( $allowed_blocks, $post ) {
         'core/columns',
         'core/group',
         'core/shortcode',
-        // Custom blocks.
-        'wp-libre-form/form-block',
     ];
 
     // Set MEOM ACF blocks.
