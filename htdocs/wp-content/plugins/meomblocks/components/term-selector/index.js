@@ -33,34 +33,34 @@ const TermSelector = (props) => {
             {props.isRequesting && <Spinner />}
 
             {!props.isRequesting && (
-				<>
-					<SelectControl
-						label={__('Select category 1', 'meom-blocks')}
-						options={options}
-						onChange={(newTermId) => {
-							setAttributes({ termId1: newTermId });
-						}}
-						value={attributes.termId1}
-					/>
+                <>
+                    <SelectControl
+                        label={__('Select category 1', 'meom-blocks')}
+                        options={options}
+                        onChange={(newTermId) => {
+                            setAttributes({ termId1: newTermId });
+                        }}
+                        value={attributes.termId1}
+                    />
 
-					<SelectControl
-						label={__('Select category 2', 'meom-blocks')}
-						options={options}
-						onChange={(newTermId) => {
-							setAttributes({ termId2: newTermId });
-						}}
-						value={attributes.termId2}
-					/>
+                    <SelectControl
+                        label={__('Select category 2', 'meom-blocks')}
+                        options={options}
+                        onChange={(newTermId) => {
+                            setAttributes({ termId2: newTermId });
+                        }}
+                        value={attributes.termId2}
+                    />
 
-					<SelectControl
-						label={__('Select category 3', 'meom-blocks')}
-						options={options}
-						onChange={(newTermId) => {
-							setAttributes({ termId3: newTermId });
-						}}
-						value={attributes.termId3}
-					/>
-				</>
+                    <SelectControl
+                        label={__('Select category 3', 'meom-blocks')}
+                        options={options}
+                        onChange={(newTermId) => {
+                            setAttributes({ termId3: newTermId });
+                        }}
+                        value={attributes.termId3}
+                    />
+                </>
             )}
         </>
     );
