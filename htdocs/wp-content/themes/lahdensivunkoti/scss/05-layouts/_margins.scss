@@ -43,7 +43,8 @@ figure {
     }
 
     :last-child.has-background,
-    :last-child.image-and-text {
+    :last-child.image-and-text,
+    :last-child.social-links {
         margin-bottom: 0;
     }
 }
@@ -66,6 +67,7 @@ figure {
 .content-area > .alignfull:first-child,
 .content-area .has-background + .has-background,
 .content-area .has-background + .image-and-text,
+.content-area .has-background + .social-links,
 .content-area .image-and-text + .has-background,
 .content-area .social-links + .has-background,
 .content-area .social-links + .image-and-text,
