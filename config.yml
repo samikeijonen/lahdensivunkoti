@@ -4,7 +4,7 @@
 name: lahdensivunkoti
 production:
   # This is used to automatically fetch data from a staging/production environment
-  domain: lahdensivunkoti.fi-r.seravo.com/
+  domain: lahdensivunkoti.fi-r.seravo.com
   ssh_port: 10574
   url: http://lahdensivunkoti.fi-r.seravo.com/
 development:
