@@ -47,7 +47,6 @@
     "seravo/seravo-plugin": "*",
 
     "wpackagist-plugin/wordpress-seo": "*",
-    "wpackagist-plugin/imagify": "*",
     "wpackagist-plugin/contact-form-7": "*"
   },
   "extra": {

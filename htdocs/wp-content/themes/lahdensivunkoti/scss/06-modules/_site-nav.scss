@@ -73,7 +73,7 @@
 
 .sub-menu {
     @include reset-list();
-    
+
     a {
         text-transform: none;
     }
@@ -100,7 +100,7 @@
             visibility: visible;
         }
     }
-    
+
 }
 
 .site-nav__toggle {
@@ -114,7 +114,7 @@
     position: relative;
     z-index: 120;
 
-    // For some reason Firefox in WIN doesn't give good focus styles withouth this.
+    /* For some reason Firefox in WIN doesn't give good focus styles withouth this. */
     &:focus {
         outline: 2px solid var(--wp--custom--color--grey--900);
     }
@@ -148,6 +148,6 @@
 
 .site-nav__sub-toggle[aria-expanded="true"] {
     svg {
-        transform: rotate(-180deg)
+        transform: rotate(-180deg);
     }
 }

@@ -37,7 +37,7 @@ if ( $content ) : ?>
             </div>
             <?php if ( $image_id ) : ?>
                 <figure class="hero__image">
-                    <?php echo wp_get_attachment_image( $image_id, 'large', '', [ 'loading' => 'eager' ] ); ?>
+                    <?php echo wp_get_attachment_image( $image_id, 'lsk-hero', '', [ 'loading' => 'eager' ] ); ?>
                 </figure>
             <?php endif; ?>
         </div>
