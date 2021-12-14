@@ -41,5 +41,6 @@ function setup() {
     );
 
     add_image_size( 'lsk-large', 912, 684, true );
+    add_image_size( 'lsk-hero', 1800, 9999, false );
 }
 add_action( 'after_setup_theme', 'Kala\setup' );
